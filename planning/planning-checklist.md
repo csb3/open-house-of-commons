@@ -13,17 +13,13 @@
 * [] ERD
 
 * [] Stack Choices
-  * 
+  * React
+  * PostgreSQL
 
 ## 2. Project Setup
 * [x] Git repo setup
 * [] Project Scaffold
 * [] Database setup
-  * Where are we getting the data from? 
-    * Openparliament API? (updated monthly)
-    * Web Scraping? 
-    * Download openparliament database? (updates monthly?)
-    * Download XML docs directly from ourcommons.ca
 * [] Seed file
 
 ## 3. Project Workflow
