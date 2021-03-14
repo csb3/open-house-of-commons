@@ -1,0 +1,25 @@
+.nav {
+  display: flex;
+  height: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  color: rgb(80, 77, 77);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+
+  &--right {
+    justify-content: flex-end;
+    color: rgb(80, 77, 77);
+    padding-right: 2rem;
+  }
+  &--left {
+    font-size: 1.25rem;
+    padding-left: 2rem;
+  }
+  a {
+    color: inherit;
+    padding: 1rem;
+    text-decoration: none;
+  }
+}
