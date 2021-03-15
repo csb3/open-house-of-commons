@@ -1,14 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Chartjs from 'chart.js';
-import mp_votes from "./sample-chart-data";
-
-const chart1Config = {
+import './ChartGrid.scss';
+const chart2Config = {
   type: 'pie',
   data: {
       labels: ['Yes', 'No'],
       datasets: [{
           label: '# of Votes',
-          data: [12, 19],
+          data: [5,2],
           backgroundColor: [
             'rgba(153, 102, 255, 0.2)',
             'rgba(255, 206, 86, 0.2)',
@@ -24,20 +23,20 @@ const chart1Config = {
     legend: {
       display: false
   },
-  title: {
-    display: true,
-    text: "How MPs Voted"
-  }
+    title: {
+      display: true,
+      text: "OHOC Users Voted"
+    }
   }
 }
 
-export default function Chart1() {
+export default function Chart2() {
   const chartContainer = useRef(null);
   const [chartInstance, setChartInstance] = useState(null);
 
   useEffect(() => {
     if (chartContainer && chartContainer.current) {
-      const newChartInstance = new Chartjs(chartContainer.current, chart1Config);
+      const newChartInstance = new Chartjs(chartContainer.current, chart2Config);
       setChartInstance(newChartInstance);
     }
   }, [chartContainer]);
