@@ -57,14 +57,14 @@ const votes = [
 export default function VoteList(props) {
 
   return (
-    <>
+    <section
+      data-testid="vote-list"
+      className="vote-list"
+    >
       <header className="vote-list__heaader">
-        43rd Parliament, Session 2
+        <h2>43rd Parliament, Session 2</h2>
       </header>
-      <section
-        data-testid="vote-list"
-        className="vote-list__main"
-      >
+      <article className="vote-list__main">
         {props.votes.map(vote => (
           <VoteListItem
             key={vote.id}
@@ -75,10 +75,10 @@ export default function VoteList(props) {
             date={vote.date}
           />
         ))}
-      </section>
+      </article>
       <footer className="vote-list__footer">
-        For votes that is not here, visit <a href="https://ourcommons.ca/">House of commons.</a>
+        If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
       </footer>
-    </>
+    </section>
   )
 }

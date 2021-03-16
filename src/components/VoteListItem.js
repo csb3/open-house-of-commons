@@ -1,21 +1,29 @@
-import React from 'react';
+import classnames from 'classnames';
+
 import '../styles/VoteListItem.scss';
 
 export default function VoteListItem(props) {
+  const result = props.result === 'Agreed To' ? '-agreedto' : '-negatived';
+  const voteClass = classnames({
+    [`vote-list-item__header${result}`]: true
+  });
+
   return (
-    <article
+    <div
       data-testid="vote-list-item"
       className="vote-list-item"
+      onClick={() => alert('vote clicked!')}
     >
-      <header className="vote-list-item__header">
-        <h4>Vote No. {props.voteNum} / {props.billNum}</h4>
+      <header className={voteClass}>
+        <h4>
+          Vote No. {props.voteNum} / {props.billNum}
+          <span>{props.result}</span>
+        </h4>
       </header>
       <div className="vote-list-item__summary">
+        <div className="vote-list-item__date">({props.date})</div>
         {props.summary}
       </div>
-      <footer className="vote-list-item__footer">
-        ({props.date}) {props.result}
-      </footer>
-    </article>
+    </div>
   );
 }
