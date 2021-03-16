@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Chartjs from 'chart.js';
-import mp_votes from "./sample-chart-data";
 
 const chart1Config = {
   type: 'pie',
