@@ -1,0 +1,21 @@
+.agree-badge {
+  height: 15px;
+  
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 5px 10px 5px 10px;
+
+  border: #2FAA1B 2px solid;
+  border-radius: 50px;
+
+  color: #2FAA1B;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.agree-icon {
+  margin-right: 10px;
+  font-size: 1em;
+}
