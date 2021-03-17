@@ -1,0 +1,168 @@
+@import './partyColorCodes.scss';
+
+@mixin party-container {
+  width: 40%;
+  border-radius: 3px 20px 20px 75px;
+  margin: 7.5px 0px 7.5px 0px;
+  padding: 0px;
+}
+
+.mp-list-item {
+  border-radius: 70px 15px 15px 70px;
+  padding: 5px;
+  border: 3px solid white;
+  min-width: 255px;
+  height: 200px;
+  display: flex;
+  justify-content: flex-start;
+  background: #fff;
+  overflow: hidden;
+  
+  img {
+    border-radius: 80px;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+
+  &__container {
+    width: 40%;
+    border-radius: 0px 20px 20px 75px;
+    margin: 7.5px 0px 7.5px 0px;
+    padding: 0px;
+
+    &.Accountability {
+      background: $Accountability;
+      @include party-container;
+    }
+
+    &.Alliance {
+      background: $Alliance;
+      @include party-container;
+    }
+
+    &.Animal {
+      background: $Animal;
+      @include party-container;
+    }
+
+    &.Bloc {
+      background: $Bloc;
+      @include party-container;
+    }
+
+    &.Canada {
+      background: $Canada;
+      @include party-container;
+    }
+
+    &.Canadian {
+      background: $Canadian;
+      @include party-container;
+    }
+
+    &.Christian {
+      background: $Christian;
+      @include party-container;
+    }
+
+    &.Communist {
+      background: $Communist;
+      @include party-container;
+    }
+
+    &.Conservative {
+      background: $Conservative;
+      @include party-container;
+    }
+    
+    &.Democratic {
+      background: $Democratic;
+      @include party-container;
+    }
+
+    &.Forces {
+      background: $Forces;
+      @include party-container;
+    }
+
+    &.Green {
+      background: $Green;
+      @include party-container;
+    }
+
+    &.Liberal {
+      background: $Liberal;
+      @include party-container;
+    }
+
+    &.Libertarian {
+      background: $Libertarian;
+      @include party-container;
+    }
+
+    &.Marijuana {
+      background: $Marijuana;
+      @include party-container;
+    }
+
+    &.Marxist-Leninist {
+      background: $Marxist-Leninist;
+      @include party-container;
+    }
+
+    &.NDP {
+      background: $NDP;
+      @include party-container;
+    }
+
+    &.Pirate {
+      background: $Pirate;
+      @include party-container;
+    }
+
+    &.Progressive {
+      background: $Progressive;
+      @include party-container;
+    }
+
+    &.Rhinoceros {
+      background: $Rhinoceros;
+      @include party-container;
+    }
+
+    &.Seniors {
+      background: $Seniors;
+      @include party-container;
+    }
+
+    &.The {
+      background: $The;
+      @include party-container;
+    }
+
+    &.United {
+      background: $United;
+      @include party-container;
+    }
+
+    &.Independent {
+      background: $Independent;
+      @include party-container;
+    }
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__header {
+    height: 30%;
+    margin: 0px;
+  }
+
+  &:hover {
+    border: 3px solid lightblue;
+  }
+}

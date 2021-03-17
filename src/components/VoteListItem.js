@@ -22,7 +22,9 @@ export default function VoteListItem(props) {
       </header>
       <div className="vote-list-item__summary">
         <div className="vote-list-item__date">({props.date})</div>
-        {props.summary}
+        {props.summary.length > 50
+           ? props.summary.slice(0, 49) + '...'
+           : props.summary}
       </div>
     </div>
   );
