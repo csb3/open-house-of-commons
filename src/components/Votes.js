@@ -1,5 +1,7 @@
 import VoteListItem from './VoteListItem';
-import './VoteList.scss';
+import './Votes.scss';
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import Vote from './Vote';
 
 const votes = [
   {
@@ -54,31 +56,43 @@ const votes = [
   }
 ];
 
-export default function VoteList(props) {
+export default function Votes() {
 
   return (
-    <section
-      data-testid="vote-list"
-      className="vote-list"
-    >
-      <header className="vote-list__heaader">
-        <h2>43rd Parliament, Session 2</h2>
-      </header>
-      <article className="vote-list__main">
-        {props.votes.map(vote => (
-          <VoteListItem
-            key={vote.id}
-            voteNum={vote.voteNum}
-            summary={vote.summary}
-            billNum={vote.billNum}
-            result={vote.result}
-            date={vote.date}
-          />
-        ))}
-      </article>
-      <footer className="vote-list__footer">
-        If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
-      </footer>
-    </section>
+    <Router forceRefresh={true}>
+      <section
+        data-testid="vote-list"
+        className="vote-list"
+      >
+        <header className="vote-list__heaader">
+          <Link to="/votes/1"><h2>43rd Parliament, Session 2</h2></Link>
+        </header>
+        <article className="vote-list__main">
+          {votes.map(vote => (
+              <VoteListItem
+                key={vote.id}
+                voteNum={vote.voteNum}
+                summary={vote.summary}
+                billNum={vote.billNum}
+                result={vote.result}
+                date={vote.date}
+              />
+          ))}
+        </article>
+        <footer className="vote-list__footer">
+          If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
+        </footer>
+      </section>
+    <Switch>
+      <Route path="/votes/1" component={Vote} />
+      <Route path="/votes" exact />
+    </Switch>
+  </Router>
   )
 }
+
+
+{/* <Route
+  path='/dashboard'
+  component={() => <Dashboard isAuthed={true} />}
+/> */}

@@ -1,18 +1,22 @@
 import classnames from 'classnames';
-
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import { useHistory } from "react-router-dom";
 import './VoteListItem.scss';
+import Vote from './Vote';
 
 export default function VoteListItem(props) {
+  const history = useHistory();
   const result = props.result === 'Agreed To' ? '-agreedto' : '-negatived';
   const voteClass = classnames({
     [`vote-list-item__header${result}`]: true
   });
+  console.log("!!!! Props ", props);
+  
 
   return (
     <div
       data-testid="vote-list-item"
       className="vote-list-item"
-      onClick={() => alert('vote clicked!')}
     >
       <header className={voteClass}>
         <h4>
