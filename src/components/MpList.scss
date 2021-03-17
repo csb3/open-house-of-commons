@@ -1,0 +1,31 @@
+.mp-list {
+  max-width: 80%;
+
+  &__header {
+    padding-left: 5px;
+  }
+
+  &__main {
+    border-radius: 15px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    background: rgb(240, 240, 250);
+    
+    // Space holder for the last row
+    &:after {
+      content: "";
+      margin: 7.5px 0px 7.5px 0px;
+      padding: 5px;
+      width: 40%;
+      min-width: 255px;
+    }
+  }
+
+  &__footer {
+    text-align: right;
+  }
+}

@@ -4,7 +4,7 @@ import VoteList from '../components/VoteList';
 import VoteListItem from '../components/VoteListItem';
 
 export default {
-  title: 'Example/VoteListItem',
+  title: 'Example/VoteList',
   component: VoteList,
 };
 
