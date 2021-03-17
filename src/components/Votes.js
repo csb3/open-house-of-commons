@@ -60,17 +60,22 @@ export default function Votes() {
 
   return (
     <Router forceRefresh={true}>
+    <Switch>
+      <Route path="/votes/:id" component={Vote} />
+      <Route path="/votes">
       <section
         data-testid="vote-list"
         className="vote-list"
       >
         <header className="vote-list__heaader">
-          <Link to="/votes/1"><h2>43rd Parliament, Session 2</h2></Link>
+          <h2>43rd Parliament, Session 2</h2>
         </header>
         <article className="vote-list__main">
           {votes.map(vote => (
+            // <Link to={`/votes/${vote.id}`}>
               <VoteListItem
                 key={vote.id}
+                id={vote.id}
                 voteNum={vote.voteNum}
                 summary={vote.summary}
                 billNum={vote.billNum}
@@ -83,9 +88,8 @@ export default function Votes() {
           If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
         </footer>
       </section>
-    <Switch>
-      <Route path="/votes/1" component={Vote} />
-      <Route path="/votes" exact />
+
+      </Route>
     </Switch>
   </Router>
   )
