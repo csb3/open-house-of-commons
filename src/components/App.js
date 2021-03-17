@@ -1,12 +1,12 @@
-import '../styles/App.css';
+// This is the / (home) page.
+
+import Vote from "./../components/Vote";
 
 const App = function() {
   return (
-    <div className="App">
-      <header className="App-header">
-          Final Project Goes Here
-      </header>
-    </div>
+    <main>
+      <Vote />
+    </main>
   );
 }
 
