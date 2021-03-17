@@ -2,17 +2,17 @@ import React, { Fragment } from "react";
 
 import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
-import Nav from "../components/Nav";
+import ChartBar from "../components/ChartBar";
 ;
 
 //👇 This default export determines where your story goes in the story list
 export default {
-  title: 'Nav',
-  component: Nav,
+  title: 'ChartBar',
+  component: ChartBar,
 };
 
 //👇 We create a “template” of how args map to rendering
-const Template = (args) => <Nav {...args} />;
+const Template = (args) => <ChartBar {...args} />;
 
 export const FirstStory = Template.bind({});
 

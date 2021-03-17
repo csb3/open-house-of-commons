@@ -1,0 +1,37 @@
+.icon {
+  width: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+
+  color: #382456;
+  font-size: 20px;
+}
+
+.overview-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.overview-item {
+  display: flex;
+  flex-direction: row;
+  margin: 5px 0px 5px 0px;
+}
+
+.overview-item-desc {
+  display: flex;
+  align-items: center;
+}
+
+.overview-item-title {
+  width: 150px;
+
+  display: flex;
+  align-items: center;
+
+  font-weight: bold;
+}

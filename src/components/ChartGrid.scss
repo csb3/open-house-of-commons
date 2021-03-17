@@ -1,0 +1,20 @@
+.chart-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 0.25rem;
+  width: 50%;
+  align-self: flex-end;
+     &--item {
+     border: 2px;
+     border-color: lightgrey;
+     border-style: solid;
+     border-radius: 10px;
+     height: width;
+     padding-top: 1rem;
+     padding-bottom: 1rem;
+     &:hover {  
+       border-color: rgba(153, 102, 255, 0.5);
+     }
+   }
+}

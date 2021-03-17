@@ -1,14 +1,15 @@
-import '../styles/App.css';
+// This is the / (home) page.
+
+import Vote from "./../components/Vote";
 import Nav from "./Nav";
 
 const App = function() {
   return (
-    <div className="App">
-      <Nav></Nav>
-      <header className="App-header">
-          Final Project Goes Here
-      </header>
-    </div>
+    <main>
+      <Nav />
+    
+      <Vote />
+    </main>
   );
 }
 
