@@ -1,0 +1,29 @@
+.split-containers {
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.vote-charts-container {
+  height: 100%;
+  width: 50%;
+
+  padding: 80px;
+  float: left;
+
+  background-color: #C0C0C0;
+
+  overflow-y: scroll;
+}
+
+.vote-info-container {
+  height: 100%;
+  width: 50%;
+
+  padding: 80px;
+  float: right;
+
+  background-color: #FDFDFD;
+}

@@ -1,0 +1,32 @@
+h1 {
+  color: #9B7EC8;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  margin: 0; /* Override default */
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 80px;
+}
+
+.header-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.header-info-date {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-info-session {
+  margin-right: 80px;
+
+  display: flex;
+  flex-direction: column;
+}
