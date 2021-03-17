@@ -6,7 +6,6 @@ import axios from "axios";
 
 import Header from "./votes/Header";
 import Overview from "./votes/overview/index";
-import FlagBadge from "./votes/badge/FlagBadge";
 
 import './../components/Vote.scss';
 
@@ -31,7 +30,7 @@ export default function Vote(props) {
       </div>
 
       <div class="vote-charts-container">
-        <FlagBadge />
+    
       </div>
     </div>
   );
