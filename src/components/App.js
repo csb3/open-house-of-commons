@@ -1,14 +1,22 @@
 // This is the / (home) page.
+import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 
-import Vote from "./../components/Vote";
+import Votes from "./../components/Votes";
 import Nav from "./Nav";
+
+//<Route path="/mp" component={MPs} />
 
 const App = function() {
   return (
     <main>
       <Nav />
-    
-      <Vote />
+      <h2>React Router!</h2>
+      <Router forceRefresh={true}>
+        <Switch>
+          <Route path="/votes" component={Votes}/>
+          <Route path="/" exact/>
+        </Switch>
+      </Router>
     </main>
   );
 }
