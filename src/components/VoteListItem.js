@@ -12,11 +12,13 @@ export default function VoteListItem(props) {
   });
   console.log("!!!! Props ", props);
   
+  const handleClick = () => history.push(`/votes/${props.id}`);
 
   return (
     <div
       data-testid="vote-list-item"
       className="vote-list-item"
+      onClick={handleClick}
     >
       <header className={voteClass}>
         <h4>
