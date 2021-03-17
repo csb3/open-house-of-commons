@@ -16,7 +16,7 @@ export default function Vote(props) {
   console.log(id);
 
   useEffect(() => {
-    axios.get(`http://localhost:3001/api/votes/${id}`)
+    axios.get(`/api/votes/${id}`)
       .then(vote => {
         setVote(vote.data);
         console.log(vote.data);
