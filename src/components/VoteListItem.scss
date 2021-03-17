@@ -1,0 +1,40 @@
+.vote-list-item {
+  border: 2px solid white;
+  border-radius: 15px;
+  margin: 7.5px 0px 7.5px 0px;
+  padding: 5px;
+  width: 30%;
+  min-width: 255px;
+  height: 200px;
+  background: #fff;
+  overflow: hidden;
+  
+  h4 {
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__date {
+    width: 100%;
+    font-size: 12px;
+    text-align: right;
+  }
+
+  &__header {
+    margin: 0px;
+    
+    
+    &-agreedto {
+      border-bottom: 2px solid rgb(175, 175, 255);
+    }
+
+    &-negatived {
+      border-bottom: 2px solid rgb(255, 175, 175);
+    }
+  }
+
+  &:hover {
+    border: 2px solid lightblue;
+  }
+}
