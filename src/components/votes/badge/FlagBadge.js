@@ -20,11 +20,9 @@ import Yukon from './../../../images/flags/yu_flag.svg';
 
 export default function FlagBadge(props) {
   return (
-    <div>
-      <div class="flag-badge">
-        <img src={Alberta} width="25px" height="15px" />
-        <div>Alberta</div>
-      </div>
+    <div class="flag-badge">
+      <img src={Alberta} width="25px" height="15px" />
+      <div>Alberta</div>
     </div>
   );
 }
