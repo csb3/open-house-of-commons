@@ -1,4 +1,6 @@
 .flag-badge {
+  height: 15px;
+
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -15,4 +17,6 @@
 
 .flag-badge img {
   margin-right: 10px;
+
+  border-radius: 50px;
 }
