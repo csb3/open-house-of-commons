@@ -1,5 +1,5 @@
 import VoteListItem from './VoteListItem';
-import '../styles/VoteList.scss';
+import './VoteList.scss';
 
 const votes = [
   {

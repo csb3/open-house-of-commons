@@ -1,6 +1,6 @@
 import classnames from 'classnames';
 
-import '../styles/VoteListItem.scss';
+import './VoteListItem.scss';
 
 export default function VoteListItem(props) {
   const result = props.result === 'Agreed To' ? '-agreedto' : '-negatived';
