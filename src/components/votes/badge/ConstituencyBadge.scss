@@ -1,7 +1,7 @@
-.flag-badge {
+.constituency-badge {
   height: 15px;
   max-width: 200px;
-
+  
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -16,17 +16,17 @@
   text-align: center;
 }
 
-.flag-icon {
+.constituency-icon {
   width: 25px;
   margin-right: 5px;
-
-  display: flex;
-  align-items: center;
+  font-size: 1em;
 }
 
-.flag-icon img {
-  display: block;
-  margin: auto;
+.constituency-name {
+  width: 170px;
 
-  border-radius: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
 }

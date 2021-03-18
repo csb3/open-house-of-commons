@@ -1,0 +1,52 @@
+.bloc-quebecois-badge {
+  border: #10406B 2px solid;
+  color: #10406B;
+}
+
+.conservative-badge {
+  border: #0F2D52 2px solid;
+  color: #0F2D52;
+}
+
+.green-badge {
+  border: #3D9B35 2px solid;
+  color: #3D9B35;
+}
+
+.liberal-badge {
+  border: #D7322D 2px solid;
+  color: #D7322D;
+}
+
+.ndp-badge {
+  border: #F58220 2px solid;
+  color: #F58220;
+}
+
+.party-badge {
+  height: 15px;
+  max-width: 200px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 5px 10px 5px 10px;
+  border-radius: 50px;
+
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.party-logo {
+  width: 25px;
+  margin-right: 5px;
+
+  display: flex;
+  align-items: center;
+}
+
+.party-logo img {
+  display: block;
+  margin: auto;
+}
