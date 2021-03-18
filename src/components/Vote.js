@@ -12,15 +12,13 @@ import './../components/Vote.scss';
 export default function Vote(props) {
   const {id} = useParams(); // req.params.shortURL
   const [vote, setVote] = useState({});
-  console.log(id);
 
   useEffect(() => {
     axios.get(`/api/votes/${id}`)
       .then(vote => {
         setVote(() => vote.data);
-        console.log("Vote.data: ", vote.data);
       })
-  }, [id]);
+  }, []);
 
   return (
     <div class="split-containers">

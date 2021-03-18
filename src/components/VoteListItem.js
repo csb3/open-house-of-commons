@@ -10,7 +10,6 @@ export default function VoteListItem(props) {
   const voteClass = classnames({
     [`vote-list-item__header${result}`]: true
   });
-  console.log("!!!! Props ", props);
   
   const handleClick = () => history.push(`/votes/${props.id}`);
 
