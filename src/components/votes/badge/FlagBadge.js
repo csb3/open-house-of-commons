@@ -1,8 +1,4 @@
-// This is a flag badge component.
-
 import React from "react";
-
-import "../badge/FlagBadge.scss";
 
 import Alberta from './../../../images/flags/al_flag.svg';
 import BritishColumbia from './../../../images/flags/bc_flag.svg';
@@ -18,10 +14,12 @@ import Quebec from './../../../images/flags/qu_flag.svg';
 import Saskatchewan from './../../../images/flags/sa_flag.svg';
 import Yukon from './../../../images/flags/yu_flag.svg';
 
+import "../badge/FlagBadge.scss";
+
 export default function FlagBadge(props) {
   return (
     <div class="flag-badge">
-      <img src={Alberta} width="25px" height="15px" />
+      <div class="flag-icon"><img src={Alberta} alt="Flag of {Alberta}" width="25px" height="15px" /></div>
       <div>Alberta</div>
     </div>
   );

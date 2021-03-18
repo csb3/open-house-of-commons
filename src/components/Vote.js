@@ -1,12 +1,13 @@
 // This is the /vote/# page.
 
 import { useEffect, useState } from 'react';
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import axios from "axios";
 
 import Header from "./votes/Header";
 import Overview from "./votes/overview/index";
 import ChartGrid from "./../components/ChartGrid";
+
 import './../components/Vote.scss';
 
 export default function Vote(props) {
@@ -18,12 +19,14 @@ export default function Vote(props) {
       .then(vote => {
         setVote(() => vote.data);
       })
-  }, []);
+  }, [id]);
 
   return (
     <div class="split-containers">
       <div class="vote-info-container">
-        <Header />
+        <Header 
+          data={vote}
+        />
         <Overview />
       </div>
 
