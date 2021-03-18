@@ -11,10 +11,18 @@
   &--right {
     justify-content: flex-end;
     padding-right: 2rem;
+    position: right;
   }
   &--left {
     font-size: 1.25rem;
     padding-left: 2rem;
+  }
+  &--button {
+    background-color: white;
+    border-color: rgb(80, 77, 77);
+    border-radius: 5px;
+    padding: .25rem;
+    width: 7rem;
   }
   a {
     color: inherit;
