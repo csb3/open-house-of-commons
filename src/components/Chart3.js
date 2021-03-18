@@ -14,16 +14,17 @@ export default function Chart3(props) {
   const chart3Config = {
     type: 'pie',
     data: {
-        labels: ['Liberal', 'Conservative', 'NDP', 'Bloc Quebecois', 'Green'],
+        labels: ['Liberal', 'Conservative', 'NDP', 'Bloc Quebecois', 'Green', 'Independent'],
         datasets: [{
             label: '# of Votes',
-            data: [yesVotes.Liberal, yesVotes.Conservative, yesVotes.NDP, yesVotes["Bloc Québécois"], yesVotes["Green Party"]],
+            data: [yesVotes.Liberal, yesVotes.Conservative, yesVotes.NDP, yesVotes["Bloc Québécois"], yesVotes["Green Party"], yesVotes.Independent],
             backgroundColor: [
-                '#D7192033',
-                '#1A478233',
-                '#F3702133',
-                '#33B2CC33',
-                '#3D9B3533',
+                '#D7192066',
+                '#1A478266',
+                '#F3702166',
+                '#33B2CC66',
+                '#3D9B3566',
+                '#C0C0C066'
             ],
             borderColor: [
               '#D71920',
@@ -31,6 +32,7 @@ export default function Chart3(props) {
               '#F37021',
               '#33B2CC',
               '#3D9B35',
+              '#C0C0C0'
             ],
             borderWidth: 1
         }]
