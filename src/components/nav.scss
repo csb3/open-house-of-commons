@@ -23,6 +23,12 @@
     border-radius: 5px;
     padding: .25rem;
     width: 7rem;
+    &:hover {
+      background-color: lightgray;
+    }
+    &:focus {
+      outline-color: rgb(80, 77, 77);
+    }
   }
   a {
     color: inherit;
