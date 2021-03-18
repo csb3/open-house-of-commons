@@ -12,12 +12,12 @@ import './../components/Vote.scss';
 
 export default function Vote(props) {
   const {id} = useParams(); // req.params.shortURL
-  const [vote, setVote] = useState();
-
+  const [vote, setVote] = useState({});
+  
   useEffect(() => {
     axios.get(`/api/votes/${id}`)
       .then(vote => {
-        setVote(vote.data);
+        setVote(() => vote.data);
       })
   }, [id]);
 
@@ -31,7 +31,7 @@ export default function Vote(props) {
       </div>
 
       <div class="vote-charts-container">
-        <ChartGrid></ChartGrid>
+        {vote.voteInfo && <ChartGrid {...vote}></ChartGrid>}
       </div>
     </div>
   );

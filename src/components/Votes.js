@@ -28,7 +28,6 @@ export default function Votes() {
         </header>
         <article className="vote-list__main">
           {votes.map(vote => (
-            // <Link to={`/votes/${vote.id}`}>
               <VoteListItem
                 key={vote.id}
                 id={vote.id}

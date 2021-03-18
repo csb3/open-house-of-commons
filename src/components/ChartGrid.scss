@@ -3,11 +3,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   grid-gap: 0.25rem;
-  width: 50%;
-  align-self: flex-end;
+  width: max;
      &--item {
      border: 2px;
      border-color: lightgrey;
+     background-color: white;
      border-style: solid;
      border-radius: 10px;
      height: width;
