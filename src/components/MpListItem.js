@@ -1,44 +1,32 @@
-import classnames from 'classnames';
-
 import './MpListItem.scss';
-
-const partyNameParser = function(string) {
-  let returnString = '';
-  for (let i = 0; i < string.length; i++) {
-    if (string[i] === '/\s+/' || string[i] === ',') {
-      return returnString;
-    }
-    returnString += string[i];
-  }
-
-  return returnString;
-}
+import getPartyColor from './helpers/getPartyColor';
+import partyNameSlicer from './helpers/partyNameSlicer';
 
 export default function MpListItem(props) {
-  const shortPartyName = partyNameParser(props.party_name);
+  const partyColor = getPartyColor(props.party_name);
+  const partyShortName = partyNameSlicer(props.party_name);
 
   return (
     <div
-      className={`mp-list-item__container ${shortPartyName}`}
-      onClick={() => alert('mp clicked!')}
+      style={{background: partyColor}}
+      className="mp-list-item"
     >
       <div
         data-testid="mp-list-item"
-        className="mp-list-item"
-        
+        className={`mp-list-item__main ${partyShortName}`}
+        onClick={() => console.log(`${props.id} clicked`)}
       >
         <img alt={`${props.first_name} ${props.last_name}`} src={props.thumbnail} />
-        <div className="mp-list-item__main">
-          <header className="mp-list-item__header">
+        <aside className="mp-list-item__main-aside">
+          <header className="mp-list-item__main-header">
             <h3>{props.first_name} {props.last_name}</h3>
-            
-          </header>
-          <div>
             <h4>{props.party_name}</h4>
-            <span>{props.constituency}</span><br/>
-            <span>{props.location}</span>
-          </div>
-        </div>
+          </header>
+          <footer className="mp-list__main-footer">
+            <div>{props.constituency}</div>
+            <div><b>{props.location}</b></div>
+          </footer>
+        </aside>
       </div>
     </div>
   );

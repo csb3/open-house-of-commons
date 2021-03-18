@@ -1,8 +1,6 @@
 import classnames from 'classnames';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 import { useHistory } from "react-router-dom";
 import './VoteListItem.scss';
-import Vote from './Vote';
 
 export default function VoteListItem(props) {
   const history = useHistory();
