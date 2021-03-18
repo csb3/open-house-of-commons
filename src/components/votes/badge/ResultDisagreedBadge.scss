@@ -1,5 +1,6 @@
 .disagree-badge {
   height: 15px;
+  max-width: 200px;
   
   display: flex;
   flex-direction: row;
@@ -16,6 +17,7 @@
 }
 
 .disagree-icon {
-  margin-right: 10px;
-  font-size: 1em;
+  width: 25px;
+  margin-right: 5px;
+  font-size: 1.25em;
 }
