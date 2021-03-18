@@ -1,35 +1,41 @@
 // This is the /vote/# header component.
 
 import React from "react";
-import { useHistory } from "react-router-dom";
+
+import getOrdinalNumber from "./../helpers/getOrdinalNumber.js"
 
 import "../votes/Header.scss";
 
 export default function Header(props) {
   if (props.data) {
-    console.log("!!!!", props.data);
-    console.log("????", props.data.motionInfo);
+    const data = props.data.motionInfo["0"];
+    const parlNumOrdinal = getOrdinalNumber(data.parl_num);
+    const sessNumOrdinal = getOrdinalNumber(data.sess_num);
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+    const date = new Date(data.date.toString());
+    const dateStyled = date.toLocaleDateString(undefined, options);
 
     return (
       <div class="header">
-        <h1>Vote No. {props.data.motionInfo["0"].vote_num}</h1>
+        <h1>Vote No. {data.vote_num}</h1>
   
         <div class="header-info">
           <div class="header-info-session">
-            <p>43rd Parliament</p>
-            <p>2nd Session</p>
+            <p>{data.parl_num}{parlNumOrdinal} Parliament</p>
+            <p>{data.sess_num}{sessNumOrdinal} Session</p>
           </div>
   
           <div class="header-info-date">
-            <p>Sitting No. 65</p>
-            <p>Wednesday, February 24, 2021</p>
+            <p>Sitting No. {data.sitting_num}</p>
+            <p>{dateStyled}</p>
           </div>
         </div>
       </div>
     );
   } else {
     return (
-      <div><h2>LOADING...</h2></div>
+      <div><h4>LOADING...</h4></div>
     )
   }
 }
