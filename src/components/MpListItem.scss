@@ -1,168 +1,181 @@
 @import './partyColorCodes.scss';
 
-@mixin party-container {
-  width: 40%;
-  border-radius: 3px 20px 20px 75px;
+.mp-list-item {
+  width: 280px;
+  min-width: 280px;
+  border-radius: 3px 20px 20px 74px;
   margin: 7.5px 0px 7.5px 0px;
   padding: 0px;
-}
 
-.mp-list-item {
-  border-radius: 70px 15px 15px 70px;
-  padding: 5px;
-  border: 3px solid white;
-  min-width: 255px;
-  height: 200px;
-  display: flex;
-  justify-content: flex-start;
-  background: #fff;
-  overflow: hidden;
-  
-  img {
-    border-radius: 80px;
-  }
-  
-  h3 {
-    text-align: center;
-  }
+  &__main {
+    border-radius: 70px 15px 15px 70px;
+    padding: 5px;
+    height: 180px;
+    border: 3px solid white;
+    display: flex;
+    justify-content: flex-start;
+    background: #fff;
+    
+    img {
+      border-radius: 80px;
+    }
+    
+    h3 {
+      text-align: center;
+      margin: 10px;
+    }
 
-  &__container {
-    width: 40%;
-    border-radius: 0px 20px 20px 75px;
-    margin: 7.5px 0px 7.5px 0px;
-    padding: 0px;
+    h4 {
+      margin: 10px;
+    }
+ 
+    &-aside {
+      width: 100%;
+      margin: 0px;
+    }
 
     &.Accountability {
-      background: $Accountability;
-      @include party-container;
+      &:hover {
+        border: 3px solid #CC002C;
+      }
     }
 
     &.Alliance {
-      background: $Alliance;
-      @include party-container;
+      &:hover {
+        border: 3px solid #336600;
+      }
     }
 
     &.Animal {
-      background: $Animal;
-      @include party-container;
+      &:hover {
+        border: 3px solid #5CA586;
+      }
     }
 
     &.Bloc {
-      background: $Bloc;
-      @include party-container;
+      &:hover {
+        border: 3px solid #33B2CC;
+      }
     }
 
     &.Canada {
-      background: $Canada;
-      @include party-container;
+      &:hover {
+        border: 3px solid #FECE0A;
+      }
     }
 
     &.Canadian {
-      background: $Canadian;
-      @include party-container;
+      &:hover {
+        border: 3px solid #AC2C2C;
+      }
     }
 
     &.Christian {
-      background: $Christian;
-      @include party-container;
+      &:hover {
+        border: 3px solid #8D0E3B;
+      }
     }
 
     &.Communist {
-      background: $Communist;
-      @include party-container;
+      &:hover {
+        border: 3px solid #DD0101;
+      }
     }
 
     &.Conservative {
-      background: $Conservative;
-      @include party-container;
+      &:hover {
+        border: 3px solid #1A4782;
+      }
     }
-    
+
     &.Democratic {
-      background: $Democratic;
-      @include party-container;
+      &:hover {
+        border: 3px solid #2B035C;
+      }
     }
 
     &.Forces {
-      background: $Forces;
-      @include party-container;
+      &:hover {
+        border: 3px solid #152869;
+      }
     }
 
     &.Green {
-      background: $Green;
-      @include party-container;
+      &:hover {
+        border: 3px solid #3D9B35;
+      }
     }
 
     &.Liberal {
-      background: $Liberal;
-      @include party-container;
+      &:hover {
+        border: 3px solid #D71920;
+      }
     }
 
     &.Libertarian {
-      background: $Libertarian;
-      @include party-container;
+      &:hover {
+        border: 3px solid #F2BA00;
+      }
     }
 
     &.Marijuana {
-      background: $Marijuana;
-      @include party-container;
+      &:hover {
+        border: 3px solid #907430;
+      }
     }
 
     &.Marxist-Leninist {
-      background: $Marxist-Leninist;
-      @include party-container;
+      &:hover {
+        border: 3px solid #DA251E;
+      }
     }
 
     &.NDP {
-      background: $NDP;
-      @include party-container;
+      &:hover {
+        border: 3px solid #F37021;
+      }
     }
 
     &.Pirate {
-      background: $Pirate;
-      @include party-container;
+      &:hover {
+        border: 3px solid #70009F;
+      }
     }
 
     &.Progressive {
-      background: $Progressive;
-      @include party-container;
+      &:hover {
+        border: 3px solid #002FA1;
+      }
     }
 
     &.Rhinoceros {
-      background: $Rhinoceros;
-      @include party-container;
+      &:hover {
+        border: 3px solid #3F2204;
+      }
     }
 
     &.Seniors {
-      background: $Seniors;
-      @include party-container;
+      &:hover {
+        border: 3px solid #FFFFFF;
+      }
     }
 
     &.The {
-      background: $The;
-      @include party-container;
+      &:hover {
+        border: 3px solid #3B3999;
+      }
     }
 
     &.United {
-      background: $United;
-      @include party-container;
+      &:hover {
+        border: 3px solid #CC9900;
+      }
     }
 
     &.Independent {
-      background: $Independent;
-      @include party-container;
+      &:hover {
+        border: 3px solid #C0C0C0;
+      }
     }
-  }
-
-  &__main {
-    width: 100%;
-  }
-
-  &__header {
-    height: 30%;
-    margin: 0px;
-  }
-
-  &:hover {
-    border: 3px solid lightblue;
   }
 }

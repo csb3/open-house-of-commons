@@ -1,31 +1,37 @@
 .mp-list {
-  max-width: 80%;
-
-  &__header {
-    padding-left: 5px;
-  }
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   &__main {
+    align-self: center;
+    width: 80%;
     border-radius: 15px;
-    margin: 10px 0px 10px 0px;
-    padding: 10px;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
-    align-content: flex-start;
-    background: rgb(240, 240, 250);
-    
+    text-align: center;
+    background: rgb(230, 230, 230);
+
     // Space holder for the last row
     &:after {
       content: "";
+      width: 280px;
+      min-width: 280px;
+      border-radius: 3px 20px 20px 74px;
       margin: 7.5px 0px 7.5px 0px;
-      padding: 5px;
-      width: 40%;
-      min-width: 255px;
+      padding: 0px;
     }
   }
 
-  &__footer {
-    text-align: right;
+  &__header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .mp-list__main {
+    width: 95%;
   }
 }

@@ -14,7 +14,7 @@ export default function Nav(props) {
       <Router forceRefresh={true}>
         <Link to="/">Home</Link>
         <Link to="/votes">Votes</Link>
-        <Link to="/">MPs</Link>
+        <Link to="/mps">MPs</Link>
       </Router>
     </div>
   </div>
