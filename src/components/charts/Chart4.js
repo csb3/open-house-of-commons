@@ -4,6 +4,7 @@ import Chartjs from 'chart.js';
 
 export default function Chart4(props) {
   const noVotes = {};
+  console.log("Props in Chart4: ", props);
   for (const vote of props.voteInfo) {
     if (!Object.keys(noVotes).includes(vote.party_name) && vote.voted_nay){
       noVotes[vote.party_name] = 1;

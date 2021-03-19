@@ -6,7 +6,7 @@ import axios from "axios";
 
 import Header from "./votes/Header";
 import Overview from "./votes/overview/index";
-import ChartGrid from "./../components/ChartGrid";
+import ChartGrid from "./../components/charts/ChartGrid";
 
 import './../components/Vote.scss';
 
@@ -20,7 +20,6 @@ export default function Vote(props) {
         setVote(() => vote.data);
       })
   }, [id]);
-
   return (
     <div class="split-containers">
       <div class="vote-info-container">
