@@ -12,6 +12,7 @@ export default function MPVote(props) {
     const newClass = classnames('mp-vote', {"yea": vote.voted_yea, "nay": vote.voted_nay, "paired": vote.vote_paired, "did-not-vote": !(vote.voted_nay || vote.voted_yea || vote.vote_paired)});
     return (<div className={newClass}>
       <p>{`${vote.first_name} ${vote.last_name}`}</p>
+      <p>{`${vote.name}`}</p>
       <p>{`${vote.party_name}`}</p>
       </div>);
   });
