@@ -1,8 +1,8 @@
-@import './partyColorCodes.scss';
+@import './../partyColorCodes.scss';
 
 .mp-list-item {
-  width: 280px;
-  min-width: 280px;
+  width: 300px;
+  min-width: 300px;
   border-radius: 3px 20px 20px 74px;
   margin: 7.5px 0px 7.5px 0px;
   padding: 0px;
@@ -36,145 +36,145 @@
 
     &.Accountability {
       &:hover {
-        border: 3px solid #CC002C;
+        border: 3px solid $Accountability;
       }
     }
 
     &.Alliance {
       &:hover {
-        border: 3px solid #336600;
+        border: 3px solid $Alliance
       }
     }
 
     &.Animal {
       &:hover {
-        border: 3px solid #5CA586;
+        border: 3px solid $Animal
       }
     }
 
     &.Bloc {
       &:hover {
-        border: 3px solid #33B2CC;
+        border: 3px solid $Bloc
       }
     }
 
     &.Canada {
       &:hover {
-        border: 3px solid #FECE0A;
+        border: 3px solid $Canada
       }
     }
 
     &.Canadian {
       &:hover {
-        border: 3px solid #AC2C2C;
+        border: 3px solid $Canadian
       }
     }
 
     &.Christian {
       &:hover {
-        border: 3px solid #8D0E3B;
+        border: 3px solid $Christian
       }
     }
 
     &.Communist {
       &:hover {
-        border: 3px solid #DD0101;
+        border: 3px solid $Communist
       }
     }
 
     &.Conservative {
       &:hover {
-        border: 3px solid #1A4782;
+        border: 3px solid $Conservative
       }
     }
 
     &.Democratic {
       &:hover {
-        border: 3px solid #2B035C;
+        border: 3px solid $Democratic
       }
     }
 
     &.Forces {
       &:hover {
-        border: 3px solid #152869;
+        border: 3px solid $Forces
       }
     }
 
     &.Green {
       &:hover {
-        border: 3px solid #3D9B35;
+        border: 3px solid $Green
       }
     }
 
     &.Liberal {
       &:hover {
-        border: 3px solid #D71920;
+        border: 3px solid $Liberal
       }
     }
 
     &.Libertarian {
       &:hover {
-        border: 3px solid #F2BA00;
+        border: 3px solid $Libertarian
       }
     }
 
     &.Marijuana {
       &:hover {
-        border: 3px solid #907430;
+        border: 3px solid $Marijuana
       }
     }
 
     &.Marxist-Leninist {
       &:hover {
-        border: 3px solid #DA251E;
+        border: 3px solid $Marxist-Leninist
       }
     }
 
     &.NDP {
       &:hover {
-        border: 3px solid #F37021;
+        border: 3px solid $NDP;
       }
     }
 
     &.Pirate {
       &:hover {
-        border: 3px solid #70009F;
+        border: 3px solid $Pirate;
       }
     }
 
     &.Progressive {
       &:hover {
-        border: 3px solid #002FA1;
+        border: 3px solid $Progressive;
       }
     }
 
     &.Rhinoceros {
       &:hover {
-        border: 3px solid #3F2204;
+        border: 3px solid $Rhinoceros;
       }
     }
 
     &.Seniors {
       &:hover {
-        border: 3px solid #FFFFFF;
+        border: 3px solid $Seniors;
       }
     }
 
     &.The {
       &:hover {
-        border: 3px solid #3B3999;
+        border: 3px solid $The;
       }
     }
 
     &.United {
       &:hover {
-        border: 3px solid #CC9900;
+        border: 3px solid $United;
       }
     }
 
     &.Independent {
       &:hover {
-        border: 3px solid #C0C0C0;
+        border: 3px solid $Independent;
       }
     }
   }
