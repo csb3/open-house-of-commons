@@ -16,7 +16,6 @@ export default function OverviewInfo(props) {
   if (props.data) {
     const data = props.data;
     const motionInfo = data.motionInfo["0"];
-    console.log(motionInfo)
 
     return (
       <div class="overview-info">
@@ -26,21 +25,24 @@ export default function OverviewInfo(props) {
           <div class="overview-item-desc"><a href={motionInfo.motion_url}>read the full motion text here</a></div>
         </div>
   
-        <div class="overview-item">
+        {motionInfo.bill_num !== "" &&
+          <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
           <div class="overview-item-title">Bill information</div>
           <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about {motionInfo.bill_num} here</a></div>
         </div>
+        }
+        
   
         <div class="overview-item">
-          <div class="overview-icon"><FontAwesomeIcon icon={faUser} /></div>
-          <div class="overview-item-title">Motion sponsor</div>
+          <div class="overview-icon-mp"><FontAwesomeIcon icon={faUser} /></div>
+          <div class="overview-item-title-mp">Motion sponsor</div>
           <div class="overview-item-desc">
             <div>
               {motionInfo.first_name} {motionInfo.last_name}
             </div>
             <div class="badges">
-              <div><PartyBadge party={motionInfo.party} /></div>
+              <div><PartyBadge party={motionInfo.party_name} /></div>
               <div><FlagBadge loc={motionInfo.location} /></div>
               <div><ConstituencyBadge loc={motionInfo.name} /></div>
             </div>

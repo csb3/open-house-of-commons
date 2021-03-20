@@ -6,6 +6,7 @@ import axios from "axios";
 
 import Header from "./votes/Header";
 import Overview from "./votes/overview/index";
+import YourMP from "./votes/YourMP";
 import ChartGrid from "./../components/ChartGrid";
 
 import './../components/Vote.scss';
@@ -24,8 +25,11 @@ export default function Vote(props) {
   return (
     <div class="split-containers">
       <div class="vote-info-container">
-        <Header data={vote} />
-        <Overview data={vote} />
+        <div class="vote-info-components">
+          <Header data={vote} />
+          <Overview data={vote} />
+          <YourMP data={vote} />
+        </div>
       </div>
 
       <div class="vote-charts-container">

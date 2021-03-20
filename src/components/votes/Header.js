@@ -3,6 +3,7 @@
 import React from "react";
 
 import getOrdinalNumber from "./../helpers/getOrdinalNumber.js"
+import loading from "./../../images/loading.gif"
 
 import "../votes/Header.scss";
 
@@ -22,8 +23,8 @@ export default function Header(props) {
   
         <div class="header-info">
           <div class="header-info-session">
-            <p>{data.parl_num}{parlNumOrdinal} Parliament</p>
-            <p>{data.sess_num}{sessNumOrdinal} Session</p>
+            <p>{data.parl_num}<sup>{parlNumOrdinal}</sup> Parliament</p>
+            <p>{data.sess_num}<sup>{sessNumOrdinal}</sup> Session</p>
           </div>
   
           <div class="header-info-date">
@@ -35,7 +36,9 @@ export default function Header(props) {
     );
   } else {
     return (
-      <div><h4>LOADING...</h4></div>
+      <div class="loading">
+        <img src={loading} width="20%" />
+      </div>
     )
   }
 }

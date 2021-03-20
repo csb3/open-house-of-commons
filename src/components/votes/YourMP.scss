@@ -1,7 +1,6 @@
-h2 {
-  color: #9B7EC8;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5em;
+.user-mp {
+  margin-top: 40px;
+  margin-bottom: 80px;
 }
 
 .loading {
@@ -10,12 +9,11 @@ h2 {
   justify-content: center;
 }
 
-.overview-summary {
+.sign-up-prompt {
   padding: 15px 40px 15px 40px;
   margin: 25px 0px 25px 0px;
 
-  background-color: #F4F1F9;
+  background-color: #FCFFE6;
 
-  font-style: italic;
   text-align: center;
 }
