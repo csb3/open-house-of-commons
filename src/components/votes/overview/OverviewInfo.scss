@@ -1,10 +1,19 @@
+.badges {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  overflow: hidden;
+}
+
 .overview-icon {
   width: 25px;
 
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin-right: 15px;
+  margin-right: 10px;
 
   color: #382456;
   font-size: 20px;
@@ -23,15 +32,15 @@
 }
 
 .overview-item-desc {
+  width: 400px;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .overview-item-title {
-  width: 150px;
-
-  display: flex;
-  align-items: center;
+  width: 120px;
+  margin-right: 10px;
 
   font-weight: bold;
 }

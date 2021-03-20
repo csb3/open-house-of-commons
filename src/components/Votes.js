@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import VoteListItem from './VoteListItem';
-import './Votes.scss';
 import Vote from './Vote';
+
+import './Votes.scss';
 
 export default function Votes() {
   const [votes, setVotes] = useState([]);
