@@ -5,7 +5,7 @@
   height: 7rem;
   &.yea {
     &::before {
-      content: "Voted Yes\A";
+      content: "✓\A";
       white-space: pre;
       color: white;
     }

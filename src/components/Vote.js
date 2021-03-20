@@ -48,7 +48,7 @@ export default function Vote(props) {
         {vote.voteInfo && vote.chartView === '"No" Votes By Party' && <Chart {...vote} chartType='"No" Votes By Party' display="true"></Chart>}
      </div>
     </div>
-      {vote && <MPVote {...vote}/>}
+      {vote.voteInfo && <MPVote {...vote}/>}
           </div>
   );
 }

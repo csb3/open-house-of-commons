@@ -1,11 +1,5 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-
-import getPhotoURL from './helpers/getPhotoURL';
-import MpList from './MpList';
 import './MPVote.scss';
 import classnames from "classnames";
-import MpListItem from './MpListItem';
 
 export default function MPVote(props) {
   const mpSummary = props.voteInfo.map(vote => {
