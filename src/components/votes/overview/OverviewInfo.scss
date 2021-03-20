@@ -11,13 +11,25 @@
   width: 25px;
 
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+
+  color: #612E9C;
+  font-size: 20px;
+} 
+
+.overview-icon-mp {
+  width: 25px;
+
+  display: flex;
   align-items: flex-start;
   justify-content: center;
   margin-right: 10px;
 
-  color: #382456;
+  color: #612E9C;
   font-size: 20px;
-}
+} 
 
 .overview-info {
   display: flex;
@@ -39,6 +51,19 @@
 }
 
 .overview-item-title {
+  display: flex;
+  align-items: center;
+
+  width: 120px;
+  margin-right: 10px;
+
+  font-weight: bold;
+}
+
+.overview-item-title-mp {
+  display: flex;
+  align-items: flex-start;
+
   width: 120px;
   margin-right: 10px;
 

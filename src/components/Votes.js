@@ -24,7 +24,7 @@ export default function Votes() {
         data-testid="vote-list"
         className="vote-list"
       >
-        <header className="vote-list__heaader">
+        <header className="vote-list__header">
           <h2>43rd Parliament, Session 2</h2>
         </header>
         <article className="vote-list__main">

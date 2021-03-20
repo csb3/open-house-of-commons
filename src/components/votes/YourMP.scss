@@ -1,4 +1,19 @@
-.your-mp {
-  background-color: cadetblue;
-  margin-top: 80px;
+.user-mp {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sign-up-prompt {
+  padding: 15px 40px 15px 40px;
+  margin: 25px 0px 25px 0px;
+
+  background-color: #FCFFE6;
+
+  text-align: center;
 }

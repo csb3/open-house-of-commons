@@ -35,14 +35,14 @@ export default function OverviewInfo(props) {
         
   
         <div class="overview-item">
-          <div class="overview-icon"><FontAwesomeIcon icon={faUser} /></div>
-          <div class="overview-item-title">Motion sponsor</div>
+          <div class="overview-icon-mp"><FontAwesomeIcon icon={faUser} /></div>
+          <div class="overview-item-title-mp">Motion sponsor</div>
           <div class="overview-item-desc">
             <div>
               {motionInfo.first_name} {motionInfo.last_name}
             </div>
             <div class="badges">
-              <div><PartyBadge party={motionInfo.party} /></div>
+              <div><PartyBadge party={motionInfo.party_name} /></div>
               <div><FlagBadge loc={motionInfo.location} /></div>
               <div><ConstituencyBadge loc={motionInfo.name} /></div>
             </div>

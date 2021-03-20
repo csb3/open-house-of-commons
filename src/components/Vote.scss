@@ -13,6 +13,7 @@
 .vote-charts-container {
   display: flex;
   align-items: center;
+  justify-content: center;
   
   width: 50%;
 
@@ -24,15 +25,11 @@
 
 .vote-info-components {
   height: 100%;
-  background-color: darkblue;
   margin-top: 80px;
-
-  overflow-y: hidden;
 }
 
 .vote-info-container {
   width: 50%;
-  top: 0;
 
   padding: 80px;
   float: right;
@@ -41,3 +38,19 @@
 
   background-color: #FDFDFD;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 15px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+  background: #9B7EC8;
+ }
+ ::-webkit-scrollbar-track{
+  background: #FDFDFD;
+  border-radius: 15px;
+ }

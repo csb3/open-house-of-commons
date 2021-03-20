@@ -2,7 +2,7 @@
 import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
 
 import Mps from "./Mps";
-import Votes from "./../components/Votes";
+import Votes from "./Votes";
 import Nav from "./Nav";
 
 const App = function() {

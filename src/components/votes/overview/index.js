@@ -3,6 +3,7 @@
 import React from "react";
 
 import OverviewInfo from "./OverviewInfo";
+import loading from "./../../../images/loading.gif"
 
 import "./../overview/index.scss";
 
@@ -22,7 +23,9 @@ export default function Overview(props) {
     );
   } else {
     return (
-      <div><h4>LOADING...</h4></div>
+      <div class="loading">
+        <img src={loading} width="20%" />
+      </div>
     )
   }
 }
