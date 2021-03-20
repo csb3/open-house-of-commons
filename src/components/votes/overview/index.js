@@ -3,21 +3,29 @@
 import React from "react";
 
 import OverviewInfo from "./OverviewInfo";
+import loading from "./../../../images/loading.gif"
 
 import "./../overview/index.scss";
 
 export default function Overview(props) {
-  return (
-    <div>
-      <h2>Overview</h2>
-
-      <div class="overview-summary">
-        2nd reading of Bill C-206, An Act to amend the Greenhouse Gas Pollution Pricing Act (qualifying farming fuel)
-      </div>
-
+  if (props.data) {
+    const data = props.data.motionInfo["0"];
+    
+    return (
       <div>
-        <OverviewInfo />
+        <h2>Overview</h2>
+        <div class="overview-summary">{data.summary}</div>
+  
+        <div>
+          <OverviewInfo data={props.data} />
+        </div>
       </div>
-    </div>
-  );
+    );
+  } else {
+    return (
+      <div class="loading">
+        <img src={loading} width="20%" />
+      </div>
+    )
+  }
 }

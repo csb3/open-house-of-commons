@@ -1,29 +1,56 @@
 .split-containers {
-  height: 100%;
-  width: 100%;
+  background-color: crimson;
+
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
 
   display: flex;
   flex-direction: row;
 }
 
 .vote-charts-container {
-  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
   width: 50%;
 
   padding: 1rem;
   float: left;
 
   background-color: #C0C0C0;
+}
 
-  overflow-y: scroll;
+.vote-info-components {
+  height: 100%;
+  margin-top: 80px;
 }
 
 .vote-info-container {
-  height: 100%;
   width: 50%;
 
   padding: 80px;
   float: right;
 
+  overflow-y: scroll;
+
   background-color: #FDFDFD;
 }
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+ }
+ ::-webkit-scrollbar-thumb {
+  background: #CCCCCC;
+  border-radius: 15px;
+ }
+ ::-webkit-scrollbar-thumb:hover{
+  background: #9B7EC8;
+ }
+ ::-webkit-scrollbar-track{
+  background: #FDFDFD;
+  border-radius: 15px;
+ }

@@ -3,8 +3,9 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 import VoteListItem from './VoteListItem';
-import './Votes.scss';
 import Vote from './Vote';
+
+import './Votes.scss';
 
 export default function Votes() {
   const [votes, setVotes] = useState([]);
@@ -17,14 +18,14 @@ export default function Votes() {
 
   return (
     <Router forceRefresh={true}>
-      <Switch>
-        <Route path="/votes/:id" component={Vote} />
-        <Route path="/votes">
+    <Switch>
+      <Route path="/votes/:id" component={Vote} />
+      <Route path="/votes">
         <section
           data-testid="vote-list"
           className="vote-list"
         >
-          <header className="vote-list__heaader">
+          <header className="vote-list__header">
             <h2>43rd Parliament, Session 2</h2>
           </header>
           <article className="vote-list__main">
@@ -44,8 +45,8 @@ export default function Votes() {
             If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
           </footer>
         </section>
-        </Route>
-      </Switch>
-    </Router>
-  )
+      </Route>
+    </Switch>
+  </Router>
+  );
 }

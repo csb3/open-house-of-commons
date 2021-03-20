@@ -17,10 +17,97 @@ import Yukon from './../../../images/flags/yu_flag.svg';
 import "../badge/FlagBadge.scss";
 
 export default function FlagBadge(props) {
-  return (
-    <div class="flag-badge">
-      <div class="flag-icon"><img src={Alberta} alt="Flag of {Alberta}" width="25px" height="15px" /></div>
-      <div>Alberta</div>
-    </div>
-  );
+  switch(props.loc) {
+    case "Alberta":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Alberta} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "British Columbia":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={BritishColumbia} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Manitoba":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Manitoba} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "New Brunswick":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={NewBrunswick} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Newfoundland and Labrador":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={NewfoundlandandLabrador} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Northwest Territories":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={NorthwestTerritories} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "NovaScotia":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={NovaScotia} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Nunavut":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Nunavut} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Ontario":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Ontario} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Prince Edward Island":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={PrinceEdwardIsland} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Quebec":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Quebec} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Saskatchewan":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Saskatchewan} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+    case "Yukon":
+      return (
+        <div class="flag-badge">
+          <div class="flag-icon"><img src={Yukon} alt="" width="25px" height="15px" /></div>
+          <div>{props.loc}</div>
+        </div>
+      );
+  }
 }
