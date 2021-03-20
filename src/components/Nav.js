@@ -12,7 +12,6 @@ export default function Nav(props) {
   const login = () => {
     axios.get('/api/login/1')
       .then(res => {
-            console.log("res: ", res);
         setCookie('Email', res.data[0].email, { path: '/' })
       })
       .catch(err => console.log(err));

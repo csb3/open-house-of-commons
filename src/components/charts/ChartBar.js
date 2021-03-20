@@ -3,7 +3,6 @@ import ChartBarItem from "./ChartBarItem";
 import "./ChartBar.scss";
 
 export default function ChartBar(props) {
-  console.log("Onclick in ChartBar: ", props.onClick);
   return (
     <div className="chart-bar">
       <ChartBarItem selected={props.chartView === "Overview"} chartType="Overview" onClick={props.onClick}/>

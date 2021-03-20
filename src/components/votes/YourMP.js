@@ -6,7 +6,6 @@ import "../votes/YourMP.scss";
 
 
 export default function YourMP(props) {
-  console.log(props.data)
   if (props.data) {
     return (
       <div class="user-mp">
