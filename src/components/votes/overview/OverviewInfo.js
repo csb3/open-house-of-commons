@@ -26,11 +26,14 @@ export default function OverviewInfo(props) {
           <div class="overview-item-desc"><a href={motionInfo.motion_url}>read the full motion text here</a></div>
         </div>
   
-        <div class="overview-item">
+        {motionInfo.bill_num !== "" &&
+          <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
           <div class="overview-item-title">Bill information</div>
           <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about {motionInfo.bill_num} here</a></div>
         </div>
+        }
+        
   
         <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faUser} /></div>
