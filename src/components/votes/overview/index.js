@@ -8,7 +8,7 @@ import loading from "./../../../images/loading.gif"
 import "./../overview/index.scss";
 
 export default function Overview(props) {
-  if (props.data) {
+  if (props.data && props.data.motionInfo) {
     const data = props.data.motionInfo["0"];
     
     return (

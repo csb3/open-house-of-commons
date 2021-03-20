@@ -9,7 +9,7 @@ import NDP from './../../../images/parties/party-ndp.png';
 import "../badge/PartyBadge.scss";
 
 export default function PartyBadge(props) {
-  let party = "Green";
+  let party = props.party;
 
   switch (party) {
     case "Bloc Quebecois":
