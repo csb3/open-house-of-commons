@@ -1,9 +1,11 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 import {useCookies} from 'react-cookie';
 import axios from "axios";
-import './nav.scss';
+import logo from './../images/logos/logo5.png';
+
+import "./nav.scss";
 
 export default function Nav(props) {
   const [cookies, setCookie, removeCookie] = useCookies(['Email']);
@@ -22,7 +24,12 @@ export default function Nav(props) {
   return (
   <div className="nav">
     <div className="nav--left">
-      Open House of Commons
+      <img
+        src={logo}
+        alt="Open House of Commons Logo"
+        width="9%"
+      />
+      <div>Open House of Commons</div>
     </div>
 
     <div className="nav--right">
@@ -38,4 +45,4 @@ export default function Nav(props) {
     </div>
   </div>
   );
-};
+}

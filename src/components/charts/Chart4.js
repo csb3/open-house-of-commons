@@ -41,7 +41,7 @@ export default function Chart4(props) {
     },
     options: {
       legend: {
-        display: false
+        display: true
     },
       title: {
         display: true,

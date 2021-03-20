@@ -1,6 +1,28 @@
 const getChartParams = function (props) {
   const type = props.chartType;
   const chartParams = {};
+  if (type === "How MPs Voted") {
+    let yesVotes = 0;
+    let noVotes = 0;
+  
+    for (const vote of props.voteInfo) {
+      if (vote.voted_nay) {
+        noVotes++;
+      }
+      if (vote.voted_yea) {
+        yesVotes++;
+      }
+    }
+    chartParams.data = [yesVotes, noVotes];
+  }
+  
+  if (type === "User Votes") {
+    console.log("Props in OHOC Users Voted: ", props);
+    chartParams.data = [
+      props.userVotes[0].yesvotes,
+      props.userVotes[0].novotes
+    ];
+  }
   console.log("chart type: ", type);
   if (type === '"Yes" Votes By Party' || type === '"No" Votes By Party') {
     chartParams.borderColors = [
@@ -16,15 +38,15 @@ const getChartParams = function (props) {
       (color) => color + "66"
     );
     chartParams.labels = [
-      "Liberal",
-      "Conservative",
-      "NDP",
-      "Bloc Québécois",
-      "Green Party",
-      "Independent"
+      `Liberal`,
+      `Conservative`,
+      `NDP`,
+      `Bloc Québécois`,
+      `Green Party`,
+      `Independent`
     ];
-  } else if (type === "How MPs Voted" || type === "OHOC Users Voted") {
-    chartParams.labels = ["Yes", "No"];
+  } else if (type === "How MPs Voted" || type === "User Votes") {
+    chartParams.labels = [`Yes`, `No`];
     chartParams.borderColors = [
       "rgba(153, 102, 255, 1)",
       "rgba(255, 206, 86, 1)"
@@ -75,28 +97,6 @@ const getChartParams = function (props) {
     }
   }
 
-  if (type === "How MPs Voted") {
-    let yesVotes = 0;
-    let noVotes = 0;
-
-    for (const vote of props.voteInfo) {
-      if (vote.voted_nay) {
-        noVotes++;
-      }
-      if (vote.voted_yea) {
-        yesVotes++;
-      }
-    }
-    chartParams.data = [yesVotes, noVotes];
-  }
-
-  if (type === "OHOC Users Voted") {
-    console.log("Props in OHOC Users Voted: ", props);
-    chartParams.data = [
-      props.userVotes[0].yesvotes,
-      props.userVotes[0].novotes
-    ];
-  }
 
   const chartConfig = {
     type: "pie",
@@ -114,7 +114,8 @@ const getChartParams = function (props) {
     },
     options: {
       legend: {
-        display: false
+        display: props.display || false,
+        position: "right"
       },
       title: {
         display: true,

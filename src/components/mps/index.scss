@@ -1,0 +1,13 @@
+.mps-main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  &__button {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+  }
+}

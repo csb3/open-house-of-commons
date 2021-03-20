@@ -2,16 +2,15 @@ import MpListItem from './MpListItem';
 import './MpList.scss';
 
 export default function MpList(props) {
-
   return (
     <section
       data-testid="mp-list"
       className="mp-list"
     >
-      <article className="mp-list__main">
       <header className="mp-list__header">
         <h2>43rd Parliament, Members of Parliament</h2>
       </header>
+      <article className="mp-list__main">
         {props.mps.map(mp => (
           <MpListItem
             key={mp.id}
@@ -22,9 +21,10 @@ export default function MpList(props) {
             constituency={mp.constituency}
             location={mp.location}
             thumbnail={mp.thumbnail}
+            history={props.history}
           />
         ))}
       </article>
     </section>
-  )
+  );
 }

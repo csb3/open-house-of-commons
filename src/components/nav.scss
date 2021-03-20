@@ -1,21 +1,39 @@
 .nav {
   display: flex;
-  height: 3rem;
+  height: 5rem;
   align-items: center;
   justify-content: space-between;
+  
+  height: 5rem;
   width: 100%;
-  color: rgb(80, 77, 77);
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  position: fixed;
+  z-index: 99;
+  
+  background-color: #612E9C;
   font-weight: bold;
+
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow:    2px 2px 5px 5px rgba(0, 0, 0, 0.05);
 
   &--right {
     justify-content: flex-end;
     padding-right: 2rem;
     position: right;
+    color: #FFFFFF;
+    font-family: 'Source Sans Prop', sans-serif;
   }
   &--left {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+
+    color: #FFFFFF;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
-    padding-left: 2rem;
+    padding-left: 3rem;
   }
   &--button {
     background-color: white;
@@ -31,8 +49,8 @@
     }
   }
   a {
-    color: inherit;
     padding: 1rem;
     text-decoration: none;
+    color: rgb(68, 68, 68);
   }
 }
