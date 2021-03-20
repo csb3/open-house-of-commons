@@ -12,11 +12,11 @@ export default function PartyBadge(props) {
   let party = props.party;
 
   switch (party) {
-    case "Bloc Quebecois":
+    case "Bloc Québécois":
       return (
         <div class="party-badge bloc-quebecois-badge">
           <div class="party-logo"><img src={BlocQuebecois} height="15px" /></div>
-          <div>Bloc Quebecois</div>
+          <div>Bloc Québécois</div>
         </div>
       );
     case "Conservative":
