@@ -6,9 +6,10 @@ import axios from "axios";
 
 import Header from "./votes/Header";
 import Overview from "./votes/overview/index";
+import ChartGrid from "./../components/charts/ChartGrid";
+import ChartBar from "./../components/charts/ChartBar";
+import Chart from "./../components/charts/Chart";
 import YourMP from "./votes/YourMP";
-import ChartGrid from "./../components/ChartGrid";
-
 import './../components/Vote.scss';
 
 export default function Vote(props) {
@@ -18,10 +19,13 @@ export default function Vote(props) {
   useEffect(() => {
     axios.get(`/api/votes/${id}`)
       .then(vote => {
-        setVote(() => vote.data);
+        setVote(() => {
+          return (
+            { ...vote.data, chartView: "Overview" });
+      })
       })
   }, [id]);
-
+  const setChartView = (view) => {setVote({...vote, chartView: view})};
   return (
     <div class="split-containers">
       <div class="vote-info-container">
@@ -33,8 +37,13 @@ export default function Vote(props) {
       </div>
 
       <div class="vote-charts-container">
-        {vote && <ChartGrid {...vote}></ChartGrid>}
-      </div>
+        <ChartBar {...vote} onClick={setChartView}/>
+        {vote.voteInfo && vote.chartView === "Overview" && <ChartGrid {...vote}></ChartGrid>}
+        {vote.voteInfo && vote.chartView === "How MPs Voted" && <Chart {...vote} chartType="How MPs Voted" display="true"></Chart>}
+        {vote.voteInfo && vote.chartView === "User Votes"  && <Chart {...vote} chartType="User Votes" display="true"></Chart>}
+        {vote.voteInfo && vote.chartView === '"Yes" Votes By Party' && <Chart {...vote} chartType='"Yes" Votes By Party' display="true"></Chart>}
+        {vote.voteInfo && vote.chartView === '"No" Votes By Party' && <Chart {...vote} chartType='"No" Votes By Party' display="true"></Chart>}
+     </div>
     </div>
   );
 }

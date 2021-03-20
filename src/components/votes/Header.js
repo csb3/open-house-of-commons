@@ -8,7 +8,7 @@ import loading from "./../../images/loading.gif"
 import "../votes/Header.scss";
 
 export default function Header(props) {
-  if (props.data) {
+  if (props.data && props.data.motionInfo) {
     const data = props.data.motionInfo["0"];
     const parlNumOrdinal = getOrdinalNumber(data.parl_num);
     const sessNumOrdinal = getOrdinalNumber(data.sess_num);

@@ -19,7 +19,7 @@
   &--right {
     justify-content: flex-end;
     padding-right: 2rem;
-
+    position: right;
     color: #FFFFFF;
     font-family: 'Source Sans Prop', sans-serif;
   }
@@ -33,6 +33,19 @@
     font-family: 'Roboto', sans-serif;
     font-size: 1.25rem;
     padding-left: 3rem;
+  }
+  &--button {
+    background-color: white;
+    border-color: rgb(80, 77, 77);
+    border-radius: 5px;
+    padding: .25rem;
+    width: 7rem;
+    &:hover {
+      background-color: lightgray;
+    }
+    &:focus {
+      outline-color: rgb(80, 77, 77);
+    }
   }
   a {
     color: inherit;

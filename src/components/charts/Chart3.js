@@ -1,24 +1,23 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Chartjs from 'chart.js';
 
-
-export default function Chart4(props) {
-  const noVotes = {};
+export default function Chart3(props) {
+  let yesVotes = {};
   for (const vote of props.voteInfo) {
-    if (!Object.keys(noVotes).includes(vote.party_name) && vote.voted_nay){
-      noVotes[vote.party_name] = 1;
+    if (!Object.keys(yesVotes).includes(vote.party_name) && vote.voted_yea){
+      yesVotes[vote.party_name] = 1;
     }
-    else if (vote.voted_nay) {
-      noVotes[vote.party_name]++;
+    else if (vote.voted_yea) {
+      yesVotes[vote.party_name]++;
     }
   }
-  const chart4Config = {
+  const chart3Config = {
     type: 'pie',
     data: {
         labels: ['Liberal', 'Conservative', 'NDP', 'Bloc Quebecois', 'Green', 'Independent'],
         datasets: [{
             label: '# of Votes',
-            data: [noVotes.Liberal, noVotes.Conservative, noVotes.NDP, noVotes["Bloc Québécois"], noVotes["Green Party"], noVotes.Independent],
+            data: [yesVotes.Liberal, yesVotes.Conservative, yesVotes.NDP, yesVotes["Bloc Québécois"], yesVotes["Green Party"], yesVotes.Independent],
             backgroundColor: [
                 '#D7192066',
                 '#1A478266',
@@ -40,11 +39,11 @@ export default function Chart4(props) {
     },
     options: {
       legend: {
-        display: false
+        display: true
     },
       title: {
         display: true,
-        text: '"No" Votes By Party'
+        text: '"Yes" Votes By Party'
       }
     }
   }
@@ -53,7 +52,7 @@ export default function Chart4(props) {
 
   useEffect(() => {
     if (chartContainer && chartContainer.current) {
-      const newChartInstance = new Chartjs(chartContainer.current, chart4Config);
+      const newChartInstance = new Chartjs(chartContainer.current, chart3Config);
       setChartInstance(newChartInstance);
     }
   }, [chartContainer]);
