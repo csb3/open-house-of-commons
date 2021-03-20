@@ -7,18 +7,21 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
-  color:#9B7EC8;
+  color: rgb(68, 68, 68);
+  
   &--right {
     justify-content: flex-end;
     padding-right: 2rem;
+    color: rgb(68, 68, 68);
   }
   &--left {
     font-size: 1.25rem;
     padding-left: 2rem;
+    color: rgb(68, 68, 68);
   }
   a {
-    color: inherit;
     padding: 1rem;
     text-decoration: none;
+    color: rgb(68, 68, 68);
   }
 }
