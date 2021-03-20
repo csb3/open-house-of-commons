@@ -1,0 +1,308 @@
+@import './../partyColorCodes.scss';
+
+.button {
+  border-radius: 40px;
+  font-size: 1rem;
+  height: 40px;
+  line-height: 1.2rem;
+  margin-right: 1rem;
+  width: 130px;
+  border: 5px solid white;
+  color: white;
+
+  &.Accountability {
+    background: $Accountability;
+
+    &:hover {
+      border: 2px solid $Accountability;
+    }
+
+    &.selected {
+      border-color: $Accountability;
+    }
+  }
+
+  &.Alliance {
+    background: $Alliance;
+
+    &:hover {
+      border: 2px solid $Alliance;
+    }
+
+    &.selected {
+      border-color: $Alliance;
+    }
+  }
+
+  &.Animal {
+    background: $Animal;
+
+    &:hover {
+      border: 2px solid $Animal;
+    }
+
+    &.selected {
+      border-color: $Animal;
+    }
+  }
+
+  &.Bloc {
+    background: $Bloc;
+
+    &:hover {
+      border: 2px solid $Bloc;
+    }
+
+    &.selected {
+      border-color: $Bloc;
+    }
+  }
+
+  &.Canada {
+    background: $Canada;
+
+    &:hover {
+      border: 2px solid $Canada;
+    }
+
+    &.selected {
+      border-color: $Canada;
+    }
+  }
+
+  &.Canadian {
+    background: $Canadian;
+
+    &:hover {
+      border: 2px solid $Canadian;
+    }
+
+    &.selected {
+      border-color: $Canadian;
+    }
+  }
+
+  &.Christian {
+    background: $Christian;
+
+    &:hover {
+      border: 2px solid $Christian;
+    }
+
+    &.selected {
+      border-color: $Christian;
+    }
+  }
+
+  &.Communist {
+    background: $Communist;
+
+    &:hover {
+      border: 2px solid $Communist;
+    }
+
+    &.selected {
+      border-color: $Communist;
+    }
+  }
+
+  &.Conservative {
+    background: $Conservative;
+
+    &:hover {
+      border: 2px solid $Conservative;
+    }
+
+    &.selected {
+      border-color: $Conservative;
+    }
+  }
+
+  &.Democratic {
+    background: $Democratic;
+
+    &:hover {
+      border: 2px solid $Democratic;
+    }
+
+    &.selected {
+      border-color: $Democratic;
+    }
+  }
+
+  &.Forces {
+    background: $Forces;
+
+    &:hover {
+      border: 2px solid $Forces;
+    }
+
+    &.selected {
+      border-color: $Forces;
+    }
+  }
+
+  &.Green {
+    background: $Green;
+
+    &:hover {
+      border: 2px solid $Green;
+    }
+
+    &.selected {
+      border-color: $Green;
+    }
+  }
+
+  &.Liberal {
+    background: $Liberal;
+
+    &:hover {
+      border: 2px solid $Liberal;
+    }
+
+    &.selected {
+      border-color: $Liberal;
+    }
+  }
+
+  &.Libertarian {
+    background: $Libertarian;
+
+    &:hover {
+      border: 2px solid $Libertarian;
+    }
+
+    &.selected {
+      border-color: $Libertarian;
+    }
+  }
+
+  &.Marijuana {
+    background: $Marijuana;
+
+    &:hover {
+      border: 2px solid $Marijuana;
+    }
+
+    &.selected {
+      border-color: $Marijuana;
+    }
+  }
+
+  &.Marxist-Leninist {
+    background: $Marxist-Leninist;
+
+    &:hover {
+      border: 2px solid $Marxist-Leninist;
+    }
+
+    &.selected {
+      border-color: $Marxist-Leninist;
+    }
+  }
+
+  &.NDP {
+    background: $NDP;
+
+    &:hover {
+      border: 2px solid $NDP;
+    }
+
+    &.selected {
+      border-color: $NDP;
+    }
+  }
+
+  &.Pirate {
+    background: $Pirate;
+
+    &:hover {
+      border: 2px solid $Pirate;
+    }
+
+    &.selected {
+      border-color: $Pirate;
+    }
+  }
+
+  &.Progressive {
+    background: $Progressive;
+
+    &:hover {
+      border: 2px solid $Progressive;
+    }
+
+    &.selected {
+      border-color: $Progressive;
+    }
+  }
+
+  &.Rhinoceros {
+    background: $Rhinoceros;
+
+    &:hover {
+      border: 2px solid $Rhinoceros;
+    }
+
+    &.selected {
+      border-color: $Rhinoceros;
+    }
+  }
+
+  &.Seniors {
+    background: $Seniors;
+
+    &:hover {
+      border: 2px solid $Seniors;
+    }
+
+    &.selected {
+      border-color: $Seniors;
+    }
+  }
+
+  &.The {
+    background: $The;
+
+    &:hover {
+      border: 2px solid $The;
+    }
+
+    &.selected {
+      border-color: $The;
+    }
+  }
+
+  &.United {
+    background: $United;
+
+    &:hover {
+      border: 2px solid $United;
+    }
+
+    &.selected {
+      border-color: $United;
+    }
+  }
+
+  &.Independent {
+    background: $Independent;
+
+    &:hover {
+      border: 2px solid $Independent;
+    }
+
+    &.selected {
+      border-color: $Independent;
+    }
+  }
+}
+
+.button:last-of-type {
+  margin-right: 0;
+}
+
+.button:focus {
+  outline: none;
+}
