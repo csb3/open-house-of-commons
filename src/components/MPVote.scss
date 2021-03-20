@@ -1,0 +1,46 @@
+.mp-vote {
+  padding: .5rem;
+  margin: .25rem;
+  width: 7rem;
+  height: 5rem;
+  &.yea {
+    &::before {
+      content: "Voted Yes\A";
+      white-space: pre;
+      color: white;
+    }
+    background-color: green;
+  }
+  &.nay {
+    &::before {
+      content: "Voted No\A";
+      white-space: pre;
+      color: white;
+    }
+    background-color: red;
+  }
+
+  &.paired {
+    &::before {
+      content: "Vote Paired\A";
+      white-space: pre;
+      color: white;
+    }
+    background-color: lightgray;
+  }
+
+  &.did-not-vote {
+    &::before {
+      content: "Did Not Vote\A";
+      white-space: pre;
+      color: white;
+    }
+    background-color: grey;
+  }
+}
+.mp-vote-container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;;
+}

@@ -9,6 +9,7 @@ import Overview from "./votes/overview/index";
 import ChartGrid from "./../components/charts/ChartGrid";
 
 import './../components/Vote.scss';
+import MPVote from './MPVote';
 
 export default function Vote(props) {
   const {id} = useParams(); // req.params.shortURL
@@ -21,11 +22,13 @@ export default function Vote(props) {
       })
   }, [id]);
   return (
+    <div>
+
     <div class="split-containers">
       <div class="vote-info-container">
         <Header 
           data={vote}
-        />
+          />
         <Overview />
       </div>
 
@@ -33,5 +36,7 @@ export default function Vote(props) {
         {vote && <ChartGrid {...vote}></ChartGrid>}
       </div>
     </div>
+      {vote && <MPVote {...vote}/>}
+          </div>
   );
 }
