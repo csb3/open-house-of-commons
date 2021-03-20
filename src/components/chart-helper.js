@@ -2,16 +2,16 @@ const getChartParams = function(chartType, voteData) {
   const chartParams = {};
   if (chartType === '"Yes" Votes By Party' || chartType === '"No" Votes By Party') {
     chartParams.borderColors = [
-                '#D71920',
-                '#1A4782',
-                '#F37021',
-                '#33B2CC',
+                '#D7322D',
+                '#0F2D52',
+                '#F58220',
+                '#10406B',
                 '#3D9B35',
                 '#C0C0C0'
     ]
     // returns muted versions of border colors for the background
     chartParams.backgroundColors = chartParams.borderColors.map(color => color + "66");
-    chartParams.labels = ['Liberal', 'Conservative', 'NDP', 'Bloc Quebecois', 'Green', 'Independent'];
+    chartParams.labels = ['Liberal', 'Conservative', 'NDP', 'Bloc Québécois', 'Green', 'Independent'];
   } else if (chartType === "How MPs Voted" || chartType === "OHOC Users Voted") {
     chartParams.labels = ['Yes', 'No']
     chartParams.borderColors = [
