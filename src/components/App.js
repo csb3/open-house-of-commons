@@ -5,13 +5,10 @@ import Mps from "./Mps";
 import Votes from "./../components/Votes";
 import Nav from "./Nav";
 
-//<Route path="/mp" component={MPs} />
-
 const App = function() {
   return (
     <main>
       <Nav />
-      <h2>React Router!</h2>
       <Router forceRefresh={true}>
         <Switch>
           <Route path="/mps" component={Mps} />

@@ -16,7 +16,6 @@ export default function OverviewInfo(props) {
   if (props.data) {
     const data = props.data;
     const motionInfo = data.motionInfo["0"];
-    console.log(motionInfo)
 
     return (
       <div class="overview-info">

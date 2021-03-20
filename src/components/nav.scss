@@ -1,9 +1,15 @@
 .nav {
   display: flex;
-  height: 3rem;
   align-items: center;
   justify-content: space-between;
+  
+  height: 5rem;
   width: 100%;
+
+  position: fixed;
+  z-index: 99;
+  
+  background-color: #FDFDFD;
   color: rgb(80, 77, 77);
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-weight: bold;
