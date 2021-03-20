@@ -23,7 +23,7 @@ export default function Chart2(props) {
     },
     options: {
       legend: {
-        display: false
+        display: true
     },
       title: {
         display: true,

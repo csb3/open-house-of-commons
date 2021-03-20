@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import "../votes/Header.scss";
 
 export default function Header(props) {
-  if (props.data) {
+  if (props.data && props.data.motionInfo) {
     console.log("!!!!", props.data);
     console.log("????", props.data.motionInfo);
 

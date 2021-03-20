@@ -18,7 +18,7 @@ export default function Chart(props) {
   }, [chartContainer]);
 
   return (
-    <div>
+    <div className="chart-grid--item">
       <canvas ref={chartContainer} />
     </div>
   );

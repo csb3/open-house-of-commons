@@ -35,7 +35,7 @@ export default function Chart1(props) {
     },
     options: {
       legend: {
-        display: false
+        display: true
     },
     title: {
       display: true,
