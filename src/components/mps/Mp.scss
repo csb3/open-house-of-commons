@@ -1,0 +1,15 @@
+.mp-page {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10rem;
+
+  &__profile {
+    width: 30%;
+  }
+  
+  &__votes {
+    width: 30%;
+  }
+}
