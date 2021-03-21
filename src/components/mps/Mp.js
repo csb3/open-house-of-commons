@@ -43,19 +43,41 @@ export default function Mp() {
 
   const showAll = () => setMp(prev => ({...prev, showAll: !prev.showAll}));
 
+  const partyNames = {
+    "Bloc Québécois": BlocQuebecois,
+    "Conservative": Conservative,
+    "Green Party": Green,
+    "Liberal": Liberal,
+    "NDP": NDP,
+  };
+
+  const flag = partyNames[mp.profile.party_name];
+
   return (
     <section
       className="mp-page"
       data-testid="mp-page"
     >
       <aside className="mp-page__profile">
-        <img src={mp.profile.thumbnail} alt={`${mp.profile.first_name} ${mp.profile.last_name}`} />
-        <section>
-          <h3>{`${mp.profile.first_name} ${mp.profile.last_name}`}</h3>
-          <div>{mp.profile.party_name}</div>
-          <div>{mp.profile.constituency}</div>
-          <div>{mp.profile.location}</div>
-        </section>
+        <div className="mp-page__profile-main">
+          <img 
+            className="mp-page__profile-main-img"
+            src={mp.profile.thumbnail}
+            alt={`${mp.profile.first_name} ${mp.profile.last_name}`}
+          />
+          <section className="mp-page__profile-main-detail">
+            <h2>{`${mp.profile.first_name} ${mp.profile.last_name}`}</h2>
+            <div>{mp.profile.party_name}</div>
+            <div>{mp.profile.constituency}</div>
+            <div>{mp.profile.location}</div>
+          </section>
+        </div>
+        {flag && 
+          <img
+            className="mp-page__partyflag"
+            src={flag}
+            alt={''}
+        />}
       </aside>
       <aside className="mp-page__votes">
         <div>
