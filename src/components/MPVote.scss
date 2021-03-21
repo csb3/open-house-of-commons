@@ -1,45 +1,61 @@
 .mp-vote {
   padding: .5rem;
   margin: .25rem;
-  width: 12rem;
-  height: 7rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
   &.yea {
     &::before {
       content: "✓\A";
       white-space: pre;
       color: white;
     }
-    background-color: green;
   }
   &.nay {
     &::before {
-      content: "Voted No\A";
+      content: "X\A";
       white-space: pre;
-      color: white;
+      color: grey;
     }
-    background-color: red;
   }
 
   &.paired {
     &::before {
-      content: "Vote Paired\A";
+      content: "=/=\A";
       white-space: pre;
       color: white;
     }
-    background-color: lightgray;
   }
 
   &.did-not-vote {
     &::before {
-      content: "Did Not Vote\A";
+      content: "N/A\A";
       white-space: pre;
       color: white;
     }
-    background-color: grey;
+  }
+  &.BlocQuébécois {
+    background-color:#0088CE;
+  }
+  &.GreenParty {
+    background-color:#427730;
+  }
+  &.NDP {
+    background-color: #FF5800
+  }
+  &.Conservative {
+    background-color:#002395;
+  }
+  &.Liberal {
+    background-color:#ED2E38;
+  }
+  &.Independent {
+    background-color:#C0C0C0;
   }
 }
 .mp-vote-container {
     width: 100%;
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     width: 80%;;
