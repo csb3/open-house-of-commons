@@ -10,6 +10,45 @@
   }
   
   &__votes {
-    width: 30%;
+    width: 45%;
+
+  }
+}
+.mp-vote {
+  text-align: left;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+  &.nay {
+    background-color: #ff000033;
+    &::after {
+      content: "  Voted Nay"
+    }
+  }
+  &.yea {
+    background-color: #00800033;
+    &::after {
+      content: "  Voted Yea"
+    }
+  }
+
+}
+.motion {
+  text-align: left;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
+
+  &.agreed {
+    background-color: #00800033;
+    &::after {
+      content: "Agreed To"
+    }
+  }
+  &.negatived {
+    background-color: #ff000033;
+    &::after {
+      content: "Negatived"
+    }
   }
 }

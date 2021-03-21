@@ -14,6 +14,7 @@ export default function MpVoteList(props) {
       yea={vote.voted_yea}
       nay={vote.voted_nay}
       paired={vote.vote_paired}
+      summary={vote.summary}
     />
   );
 
