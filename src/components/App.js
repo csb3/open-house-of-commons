@@ -6,7 +6,6 @@ import Mps from "./mps/index";
 import Votes from "./Votes";
 import Nav from "./Nav";
 import Home from "./Home";
-//<Route path="/mp" component={MPs} />
 
 const App = function() {
   return (

@@ -12,6 +12,7 @@
 
 .vote-charts-container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   
@@ -26,7 +27,7 @@
 .vote-info-components {
   height: 100%;
   margin-top: 80px;
-  margin-bottom: 100px;
+  margin-bottom: 150px;
 }
 
 .vote-info-container {
