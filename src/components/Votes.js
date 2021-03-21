@@ -4,6 +4,7 @@ import axios from 'axios';
 
 import VoteListItem from './VoteListItem';
 import Vote from './Vote';
+import MPVote from './MPVote';
 
 import './Votes.scss';
 
@@ -19,6 +20,7 @@ export default function Votes() {
   return (
     <Router forceRefresh={true}>
     <Switch>
+      <Route path="/votes/:id/mp-overview" component={MPVote} />
       <Route path="/votes/:id" component={Vote} />
       <Route path="/votes">
         <section

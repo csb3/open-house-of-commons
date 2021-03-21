@@ -1,37 +1,44 @@
 .mp-vote {
   padding: .5rem;
   margin: .25rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  text-align: center;
+  width: 12rem;
+  height: 7rem;
+
   &.yea {
     &::before {
-      content: "✓\A";
+      content: "Voted Yea\A";
+      background-color: lightgreen;
       white-space: pre;
       color: white;
     }
   }
   &.nay {
     &::before {
-      content: "X\A";
+      content: "Voted Nay\A";
+      background-color: red;
       white-space: pre;
-      color: grey;
+      color: white;
     }
   }
 
   &.paired {
     &::before {
-      content: "=/=\A";
+      content: "Vote Paired \A";
       white-space: pre;
       color: white;
+      background-color: lightgrey;
+    }
+    &p {
+      background-color: white;
     }
   }
 
   &.did-not-vote {
     &::before {
-      content: "N/A\A";
+      content: "Did Not Vote\A";
       white-space: pre;
       color: white;
+      background-color: grey;
     }
   }
   &.BlocQuébécois {
@@ -54,9 +61,13 @@
   }
 }
 .mp-vote-container {
-    width: 100%;
+    padding-top: 70px;
     position: relative;
     display: flex;
     flex-flow: row wrap;
     width: 80%;;
+}
+.MP-info {
+  background-color: white;
+  height:5rem;
 }

@@ -17,7 +17,7 @@ export default function ResultAgreedBadge(props) {
     return (
       <div class="disagree-badge">
         <div class="disagree-icon"><FontAwesomeIcon icon={faTimes} /></div>
-        <div class="result-text">Disagreed to</div>
+        <div class="result-text">Negatived</div>
       </div>
     );
   }
