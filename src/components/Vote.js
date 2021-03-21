@@ -14,7 +14,7 @@ import './../components/Vote.scss';
 
 export default function Vote(props) {
   const {id} = useParams(); // req.params.shortURL
-  const [vote, setVote] = useState();
+  const [vote, setVote] = useState({});
   
   useEffect(() => {
     axios.get(`/api/votes/${id}`)
