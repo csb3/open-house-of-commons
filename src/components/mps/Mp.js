@@ -81,11 +81,11 @@ export default function Mp() {
       </aside>
       <aside className="mp-page__votes">
         <div>
-          Motion sponsored:
+          Motions sponsored:
           <SponList sponsored={mp.sponsored} />
         </div>
         <div>
-          Recent 5 votes:
+          Recent Votes:
           <MpVoteList votes={mp.voted} show={mp.showAll} showAll={showAll} />
         </div>
       </aside>

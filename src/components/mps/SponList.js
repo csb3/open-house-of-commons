@@ -1,3 +1,4 @@
+
 import SponListItem from './SponListItem';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -6,10 +7,13 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 export default function SponList(props) {
+  console.log("Props in SponList: ", props);
   const votes = props.sponsored.map(spon =>
     <SponListItem
       key={spon.id}
       vote_num={spon.vote_num}
+      summary={spon.summary}
+      result={spon.result}
     />
   );
 
