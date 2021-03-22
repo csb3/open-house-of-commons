@@ -5,7 +5,7 @@ import { faCheck, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 import "../badge/ResultBadge.scss";
 
-export default function ResultAgreedBadge(props) {
+export default function ResultBadge(props) {
   if (props.result == "Agreed To") {
     return (
       <div class="agree-badge">

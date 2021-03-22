@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import {useCookies} from 'react-cookie';
+import { useCookies } from 'react-cookie';
 import axios from "axios";
 import logo from './../images/logos/logo5.png';
 
@@ -12,15 +12,19 @@ export default function Nav(props) {
   const login = () => {
     axios.get('/api/login/1')
       .then(res => {
-            console.log("res: ", res);
         setCookie('Email', res.data[0].email, { path: '/' })
+        setCookie('Id', res.data[0].id, { path: '/' })
+        window.location.reload();
       })
       .catch(err => console.log(err));
   }
 
   const logout = () => {
     removeCookie('Email', {path: '/'});
+    removeCookie('Id', {path: '/'});
+    window.location.reload();
   }
+
   return (
   <div className="nav">
     <div className="nav--left">

@@ -11,7 +11,6 @@ export default function Votes() {
   const [votes, setVotes] = useState([]);
   
   useEffect(() => {
-    console.log('/api/votes reloaded')
     axios.get('/api/votes')
       .then(res => setVotes(() => [...res.data]));
   }, []);

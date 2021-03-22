@@ -22,7 +22,3 @@ export default function Home() {
     </section>
   )
 }
-
-// Our goal is to make Canadian politics more accessible and engaging to the general public. When people have easier access to information they can make better decisions, such as holding their MPs accountable by seeing how they vote on topics. The challenge with getting people informed is that information gets lost in the political jargon and screens of long, monotonous text. 
-
-// To solve this issue, Open House of Commons (OHoC) displays key information directly to the user in a fast, intuitive, and visually appealing way, effectively removing the tedious process of having to search for information by themselves.

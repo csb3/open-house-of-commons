@@ -52,7 +52,7 @@ export default function OverviewInfo(props) {
         <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faClipboard} /></div>
           <div class="overview-item-title">Results</div>
-          <div><ResultBadge result={motionInfo.result} /></div>
+          <div class="result"><ResultBadge result={motionInfo.result} /></div>
         </div>
       </div>
     );

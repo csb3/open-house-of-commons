@@ -22,7 +22,7 @@
     padding-right: 2rem;
     position: right;
     color: #FFFFFF;
-    font-family: 'Source Sans Prop', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
   }
   &--left {
     display: flex;
@@ -36,7 +36,7 @@
     padding-left: 3rem;
   }
   &--button {
-    background-color: white;
+    background-color: #FFFFFF;
     border-color: rgb(80, 77, 77);
     border-radius: 5px;
     padding: .25rem;
@@ -51,6 +51,10 @@
   a {
     padding: 1rem;
     text-decoration: none;
-    color: rgb(68, 68, 68);
+    color: #FFFFFF;
+    &:hover {
+      color: #F5F5F5;
+      text-decoration:underline;
+    }
   }
 }
