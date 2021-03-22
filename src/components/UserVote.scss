@@ -1,0 +1,97 @@
+button {
+  border: none;
+  outline: none;
+}
+
+.display-close {
+  background-color: #F4F2F9;
+  max-height: 0px;
+  height: 660px;
+  overflow: hidden;
+  transition: max-height .5s ease;
+}
+
+.display-collapse {
+  background-color: #F4F2F9;
+  max-height: 660px;
+  height: 660px;
+  transition: max-height .5s ease;
+}
+
+.toggle-display {
+  background-color: #C0C0C0;
+  position: absolute;
+  right: 25px;
+
+  :hover {
+    color: #FFFFFF;
+  }
+}
+
+.user-vote {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 98;
+}
+
+.user-vote-bar {
+  background-color: #C0C0C0;
+
+  width: 656px;
+  height: 50px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  overflow: hidden;
+}
+
+.user-vote-button {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.vote-no {
+  height: 15px;
+  padding: 12px 15px 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #AA2F1B;
+  border-radius: 50px;
+
+  color: #FFFFFF;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.vote-no:hover {
+  background-color: #C36E64;
+  cursor: pointer;
+}
+
+.vote-yes {
+  height: 15px;
+  padding: 12px 15px 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #2FAA1B;
+  border-radius: 50px;
+
+  color: #FFFFFF;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.vote-yes:hover {
+  background-color: #83C469;
+  cursor: pointer;
+}

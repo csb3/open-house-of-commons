@@ -15,12 +15,13 @@ import loading from "./../../images/loading.gif"
 export default function YourMP(props) {
   const users = props.data.userInfo;
   const votes = props.data.voteInfo;
-  const [cookies, setCookie, removeCookie] = useCookies(['Email']);
+  const [cookies] = useCookies(['Email']);
 
   if (cookies.Email) {
     let userConstId;
     for (let user in users) {
       if (cookies.Email === users[user].email) {
+
         userConstId = users[user].constituency_id;
         break;
       }

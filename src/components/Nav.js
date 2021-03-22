@@ -13,13 +13,18 @@ export default function Nav(props) {
     axios.get('/api/login/1')
       .then(res => {
         setCookie('Email', res.data[0].email, { path: '/' })
+        setCookie('Id', res.data[0].id, { path: '/' })
+        window.location.reload();
       })
       .catch(err => console.log(err));
   }
 
   const logout = () => {
     removeCookie('Email', {path: '/'});
+    removeCookie('Id', {path: '/'});
+    window.location.reload();
   }
+
   return (
   <div className="nav">
     <div className="nav--left">
