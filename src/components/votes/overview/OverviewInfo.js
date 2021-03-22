@@ -29,7 +29,7 @@ export default function OverviewInfo(props) {
           <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
           <div class="overview-item-title">Bill information</div>
-          <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about {motionInfo.bill_num} here</a></div>
+          <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about Bill {motionInfo.bill_num} here</a></div>
         </div>
         }
         

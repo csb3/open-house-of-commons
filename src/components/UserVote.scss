@@ -4,7 +4,7 @@ button {
 }
 
 .display-close {
-  background-color: #F4F2F9;
+  background-color: #EBEFF4;
   max-height: 0px;
   height: 660px;
   overflow: hidden;
@@ -12,19 +12,27 @@ button {
 }
 
 .display-collapse {
-  background-color: #F4F2F9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; 
+
+  background-color: #EBEFF4;
   max-height: 660px;
   height: 660px;
   transition: max-height .5s ease;
 }
 
 .toggle-display {
-  background-color: #C0C0C0;
+  background-color: #3C6797;
   position: absolute;
   right: 25px;
 
+  color: #FFFFFF;
+
   :hover {
-    color: #FFFFFF;
+    color: #71F7B1;
   }
 }
 
@@ -36,7 +44,7 @@ button {
 }
 
 .user-vote-bar {
-  background-color: #C0C0C0;
+  background-color: #3C6797;
 
   width: 656px;
   height: 50px;
@@ -47,6 +55,7 @@ button {
   align-items: center;
   gap: 25px;
 
+  color: #FFFFFF;
   overflow: hidden;
 }
 
@@ -56,6 +65,14 @@ button {
   gap: 15px;
 }
 
+.user-vote-charts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
 .nay {
   height: 15px;
   padding: 12px 15px 12px 15px;
@@ -63,10 +80,10 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #C36E64;
+  background-color: #C0C0C0;
   border-radius: 50px;
 
-  color: #000000;
+  color: #4E4E4E;
   font-size: 0.85em;
   text-align: center;
 
@@ -87,8 +104,9 @@ button {
   }
 }
 
-.vote-no:hover {
+.nay:hover {
   background-color: #AA2F1B;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
@@ -99,10 +117,10 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #83C469;
+  background-color: #C0C0C0;
   border-radius: 50px;
 
-  color: #000000;
+  color: #4E4E4E;
   font-size: 0.85em;
   text-align: center;
 
@@ -125,6 +143,7 @@ button {
 
 .vote-yes:hover {
   background-color: #2FAA1B;
+  color: #FFFFFF;
   cursor: pointer;
 }
 
@@ -135,11 +154,11 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #C36E64;
-  border: #AA2F1B 2px solid;
+  background-color: #AA2F1B;
+  box-shadow: 1px 1px 10px 0px #4E4E4E;
   border-radius: 50px;
 
-  color: #000000;
+  color: #FFFFFF;
   font-size: 0.85em;
   text-align: center;
 }
@@ -151,11 +170,11 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #83C469;
-  border: #2FAA1B 2px solid;
+  background-color: #2FAA1B;
+  box-shadow: 1px 1px 10px 0px #4E4E4E;
   border-radius: 50px;
 
-  color: #000000;
+  color: #FFFFFF;
   font-size: 0.85em;
   text-align: center;
 }

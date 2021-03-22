@@ -1,3 +1,4 @@
+
 import { useCookies } from 'react-cookie';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -6,6 +7,9 @@ import classnames from "classnames";
 
 import UserVoteButton from "./UserVoteButton";
 import './../components/UserVote.scss';
+import MPVoteSummary from './../components/charts/MPVoteSummary';
+import UserVoteSummary from './../components/charts/UserVoteSummary';
+import UserVoteMatcher from './UserVoteMatcher';
 import loading from "./../images/loading.gif"
 import axios from 'axios';
 
@@ -37,6 +41,10 @@ export default function UserVote(props) {
                />
             </div>
             </>
+            
+          {!cookies.Email &&
+            <div>See how MP votes compare to OHoC users</div>
+          }
   
           {!props.userView && <button class="toggle-display" onClick={props.displayOn}><FontAwesomeIcon icon={faChevronUp} /></button>}
           {props.userView && <button class="toggle-display" onClick={props.displayOff}><FontAwesomeIcon icon={faChevronDown} /></button>}
@@ -44,7 +52,11 @@ export default function UserVote(props) {
   
         }
         <div class={props.userView? "display-collapse": "display-close"}>
-          hellolol
+          <UserVoteMatcher data={props} />
+          <div class="user-vote-charts">
+            <UserVoteSummary data={props} />
+            <MPVoteSummary data={props} />
+          </div>
         </div>
       </div>
     )

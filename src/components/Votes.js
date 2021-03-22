@@ -25,7 +25,8 @@ export default function Votes() {
           className="vote-list"
         >
           <header className="vote-list__header">
-            <h2>43rd Parliament, Session 2</h2>
+            <h1 class="votes-header">Votes</h1>
+            <h2 class="votes-sub-header">43rd Parliament, Session 2</h2>
           </header>
           <article className="vote-list__main">
             {votes.map(vote => (
@@ -40,9 +41,6 @@ export default function Votes() {
                 />
             ))}
           </article>
-          <footer className="vote-list__footer">
-            If you want to see all the votes in the past, visit <a href="https://www.ourcommons.ca/Members/en/votes">House of commons.</a>
-          </footer>
         </section>
       </Route>
     </Switch>

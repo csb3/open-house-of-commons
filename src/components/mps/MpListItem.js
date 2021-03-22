@@ -2,6 +2,8 @@ import './MpListItem.scss';
 import getPartyColor from '../../helpers/getPartyColor';
 import partyNameSlicer from '../../helpers/partyNameSlicer';
 
+import PartyBadge from "./../votes/badge/PartyBadge"
+
 export default function MpListItem(props) {
   const partyColor = getPartyColor(props.party_name);
   const partyShortName = partyNameSlicer(props.party_name);
@@ -22,10 +24,13 @@ export default function MpListItem(props) {
         <aside className="mp-list-item__main-aside">
           <header className="mp-list-item__main-header">
             <h3>{props.first_name} {props.last_name}</h3>
-            <h4>{props.party_name}</h4>
+            <h4 class="list-party">{props.party_name}</h4>
+            <div class="mp-party">
+              <PartyBadge party={props.party_name} />
+            </div>
           </header>
           <footer className="mp-list__main-footer">
-            <div>{props.constituency}</div>
+            <div>{props.constituency},</div>
             <div><b>{props.location}</b></div>
           </footer>
         </aside>
