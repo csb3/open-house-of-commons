@@ -1,8 +1,11 @@
 .mp-list {
   width: 100%;
   display: flex;
+  margin-top: 25px;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
 
   &__main {
     width: 80%;
@@ -11,13 +14,12 @@
     flex-flow: row wrap;
     justify-content: space-evenly;
     text-align: center;
-    background: rgb(230, 230, 230);
 
     // Space holder for the last row
     &:after {
       content: "";
-      width: 300px;
-      min-width: 300px;
+      width: 350px;
+      min-width: 350px;
       border-radius: 3px 20px 20px 74px;
       margin: 7.5px 0px 7.5px 0px;
       padding: 0px;

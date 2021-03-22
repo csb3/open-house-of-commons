@@ -7,9 +7,6 @@ export default function MpList(props) {
       data-testid="mp-list"
       className="mp-list"
     >
-      <header className="mp-list__header">
-        <h2>43rd Parliament, Members of Parliament</h2>
-      </header>
       <article className="mp-list__main">
         {props.mps.map(mp => (
           <MpListItem
