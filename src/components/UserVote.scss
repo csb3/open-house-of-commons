@@ -94,11 +94,10 @@ button {
     display: flex;
     align-items: center;
   
-    background-color: #C36E64;
-    border: #AA2F1B 2px solid;
+    background-color: #AA2F1B;
     border-radius: 50px;
   
-    color: #000000;
+    color: #FFFFFF;
     font-size: 0.85em;
     text-align: center;
   }
@@ -108,6 +107,7 @@ button {
   background-color: #AA2F1B;
   color: #FFFFFF;
   cursor: pointer;
+  box-shadow: 1px 1px 10px 0px #4E4E4E;
 }
 
 .yea {
@@ -124,6 +124,13 @@ button {
   font-size: 0.85em;
   text-align: center;
 
+  &:hover {
+    background-color: #2FAA1B;
+    color: #FFFFFF;
+    cursor: pointer;
+    box-shadow: 1px 1px 10px 0px #4E4E4E;
+  }
+
   &.selected {
     height: 15px;
     padding: 12px 15px 12px 15px;
@@ -131,20 +138,13 @@ button {
     display: flex;
     align-items: center;
   
-    background-color: #83C469;
-    border: #2FAA1B 2px solid;
+    background-color: #2FAA1B;
     border-radius: 50px;
   
-    color: #000000;
+    color: #FFFFFF;
     font-size: 0.85em;
     text-align: center;
   }
-}
-
-.vote-yes:hover {
-  background-color: #2FAA1B;
-  color: #FFFFFF;
-  cursor: pointer;
 }
 
 .voted-no {
