@@ -26,6 +26,6 @@ export default function UserVoteMatcher(props) {
   const match = 100 - voteDiffYea;
 
   return (
-    <div class="matcher">{match}% match</div>
+    <div class="matcher"><strong>{match}</strong>% match</div>
   );
 }
