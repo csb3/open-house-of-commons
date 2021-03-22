@@ -14,7 +14,7 @@ export default function Chart(props) {
       const newChartInstance = new Chartjs(chartContainer.current, chartConfig);
       setChartInstance(newChartInstance);
     }
-  }, [chartContainer]);
+  }, [chartContainer, props]);
 
   return (
     <div className="chart-grid--item">
