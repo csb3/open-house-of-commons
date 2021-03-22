@@ -63,16 +63,16 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #AA2F1B;
+  background-color: #C36E64;
   border-radius: 50px;
 
-  color: #FFFFFF;
+  color: #000000;
   font-size: 0.85em;
   text-align: center;
 }
 
 .vote-no:hover {
-  background-color: #C36E64;
+  background-color: #AA2F1B;
   cursor: pointer;
 }
 
@@ -83,15 +83,47 @@ button {
   display: flex;
   align-items: center;
 
-  background-color: #2FAA1B;
+  background-color: #83C469;
   border-radius: 50px;
 
-  color: #FFFFFF;
+  color: #000000;
   font-size: 0.85em;
   text-align: center;
 }
 
 .vote-yes:hover {
-  background-color: #83C469;
+  background-color: #2FAA1B;
   cursor: pointer;
+}
+
+.voted-no {
+  height: 15px;
+  padding: 12px 15px 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #C36E64;
+  border: #AA2F1B 2px solid;
+  border-radius: 50px;
+
+  color: #000000;
+  font-size: 0.85em;
+  text-align: center;
+}
+
+.voted-yes {
+  height: 15px;
+  padding: 12px 15px 12px 15px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: #83C469;
+  border: #2FAA1B 2px solid;
+  border-radius: 50px;
+
+  color: #000000;
+  font-size: 0.85em;
+  text-align: center;
 }
