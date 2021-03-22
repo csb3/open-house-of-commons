@@ -26,13 +26,14 @@ export default function Vote(props) {
       .then(vote => {
         setVote(() => {
           return (
-            { ...vote.data, chartView: "Overview"}
+            { ...vote.data, chartView: "Overview", userView: false}
           );
         })
       })
   }, []);
 
   const setChartView = (view) => {setVote({...vote, chartView: view})};
+  const setDisplayView = (view) => {setVote({...vote, userView: view})};
   const updateVote = (name) => {
 
     // if vote exists, delete it
@@ -86,6 +87,8 @@ export default function Vote(props) {
           <UserVote 
             {...vote} 
             updateVote={updateVote}
+            displayOn = {() => setDisplayView(true)}
+            displayOff = {() => setDisplayView(false)}
           />
       </div>
     </div>

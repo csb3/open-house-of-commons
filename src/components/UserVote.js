@@ -22,8 +22,8 @@ export default function UserVote(props) {
     console.log("Props.votes: ", props.votes);
     return (
       <div class="user-vote">
-          {cookies.Email &&
         <div class="user-vote-bar">
+          {cookies.Email &&
             <>
             <div>How would <strong>you</strong> vote on this motion?</div>
             <div class="user-vote-button">
@@ -41,6 +41,7 @@ export default function UserVote(props) {
                />
             </div>
             </>
+          }
             
           {!cookies.Email &&
             <div>See how MP votes compare to OHoC users</div>
@@ -49,8 +50,7 @@ export default function UserVote(props) {
           {!props.userView && <button class="toggle-display" onClick={props.displayOn}><FontAwesomeIcon icon={faChevronUp} /></button>}
           {props.userView && <button class="toggle-display" onClick={props.displayOff}><FontAwesomeIcon icon={faChevronDown} /></button>}
         </div>
-  
-        }
+   
         <div class={props.userView? "display-collapse": "display-close"}>
           <UserVoteMatcher data={props} />
           <div class="user-vote-charts">
