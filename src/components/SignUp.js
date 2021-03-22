@@ -33,7 +33,10 @@ export default function SignUp(props) {
     const email=state.email;
     const password=state.password;
 
-    axios.post("/api/signup", { email, password });
+    axios.post("/api/signup", { email, password })
+      .then((res) => {
+        console.log(res.data[0].email);
+      });
   };
 
   // useEffect(() => {
