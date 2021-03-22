@@ -22,8 +22,8 @@ export default function MpVoteList(props) {
 
   return (
     <div>
-      {!props.show && <FontAwesomeIcon onClick={() => props.showAll()} icon={faChevronCircleDown} size={"2x"} />}
-      {props.show && <FontAwesomeIcon onClick={() => props.showAll()} icon={faChevronCircleUp} size={"2x"} />}
+      {!props.show && <FontAwesomeIcon onClick={props.showAll} icon={faChevronCircleDown} size={"2x"} />}
+      {props.show && <FontAwesomeIcon onClick={props.showAll} icon={faChevronCircleUp} size={"2x"} />}
       <ul>{show}</ul>
     </div>
   );

@@ -7,20 +7,25 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import "./Mp.scss";
 import classnames from "classnames";
+import Vote from '../Vote';
 
 export default function MpVoteListItem(props) {
   const mpVoteClass = classnames("mp-vote", {"nay": props.nay, "yea": props.yea})
-  console.log("Props in VoteListItem: ", props);
   return (
-    <div className={mpVoteClass}>
-      {props.summary}
-      <br />
-      <br />
-      <Link to={`/votes/${props.vote_num}`}>{`Vote No. ${props.vote_num}`}</Link>
-      {`\u00A0\u00A0\u00A0\u00A0`} 
-      {props.vote_paired && <FontAwesomeIcon icon={faEquals} />}
-      {props.yea && <FontAwesomeIcon icon={faCheck} />}
-      {props.nay && <FontAwesomeIcon icon={faTimes} />}
-    </div>
-  )
+    <Router forceRefresh={true}>
+      <div className={mpVoteClass} onClick={props.linkTo}>
+        {props.summary}
+        <br />
+        <br />
+        <Link to={`/votes/${props.id}`}>{`Vote No. ${props.vote_num}`}</Link>
+        {`\u00A0\u00A0\u00A0\u00A0`} 
+        {props.vote_paired && <FontAwesomeIcon icon={faEquals} />}
+        {props.yea && <FontAwesomeIcon icon={faCheck} />}
+        {props.nay && <FontAwesomeIcon icon={faTimes} />}
+      </div>
+      <Switch>
+        <Route path="/votes/:id" component={Vote} />
+      </Switch>
+    </Router>
+  );
 }
