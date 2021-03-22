@@ -1,7 +1,7 @@
 // This is the /vote/# page.
 
 import { useEffect, useRef, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import axios from "axios";
 
@@ -19,23 +19,50 @@ export default function Vote(props) {
   const [vote, setVote] = useState({});
   const [cookies] = useCookies(['Id']);
   const userId = cookies.Id ? cookies.Id : null;
+  const history = useHistory();
   
   useEffect(() => {
-    console.log(userId);
     axios.get(`/api/votes/${id}`, {params: {userId: userId}})
       .then(vote => {
         setVote(() => {
           return (
-            { ...vote.data, chartView: "Overview", userView: false}
+            { ...vote.data, chartView: "Overview"}
           );
         })
       })
-  }, [id]);
+  }, []);
 
   const setChartView = (view) => {setVote({...vote, chartView: view})};
-  const setDisplayView = (view) => {setVote({...vote, userView: view})};
+  const updateVote = (name) => {
 
-  console.log(vote)
+    // if vote exists, delete it
+    // if vote exists and name is Yes and voted_yea is true
+    const params = {};
+    if (vote.votes[0]) {
+      params.userVoteId = vote.votes[0].id;
+      // If The user has already voted No and clicks no it unselects it.
+      if ((vote.votes[0].voted_nay && name !== "No") || (vote.votes[0].voted_yea && name !== "Yes")) {
+        params.userId = cookies.Id;
+        params.nay = name === "No" ? true : false;
+        params.yea = name === "Yes" ? true : false;
+      }
+    } else {
+      params.userId = cookies.Id;
+      params.nay = name === "No" ? true : false;
+      params.yea = name === "Yes" ? true : false;
+    }
+    console.log("Vote", vote);
+    
+    axios.post(`/api/votes/${vote.motionInfo[0].id}`, {...params})
+      .then((res) => {
+        setVote(() => {
+          return {...vote, votes: res.data}
+        })
+      })
+      .then(() => history.push(`/votes/${vote.motionInfo[0].id}`))
+      .catch(err => console.log(err))
+    //if vote does not exist, add it with either 'yea' or nay'
+  }
 
   return (
     <div class="split-containers">
@@ -59,8 +86,7 @@ export default function Vote(props) {
 
           <UserVote 
             {...vote} 
-            displayOn = {() => setDisplayView(true)}
-            displayOff = {() => setDisplayView(false)}
+            updateVote={updateVote}
           />
       </div>
     </div>
