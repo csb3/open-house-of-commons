@@ -1,0 +1,13 @@
+.user-vote-chart-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+  width: 250px;
+  height: 380px;
+}
+
+.user-vote-disclaimer {
+  font-size: 0.8em;
+  font-style: italic;
+}

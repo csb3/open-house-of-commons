@@ -118,6 +118,9 @@ const getChartParams = function (props) {
       title: {
         display: true,
         text: type
+      },
+      plugins: {
+        datalabels: false
       }
     }
   };
