@@ -56,10 +56,9 @@ export default function Vote(props) {
     axios.post(`/api/votes/${vote.motionInfo[0].id}`, {...params})
       .then((res) => {
         setVote(() => {
-          return {...vote, votes: res.data}
+          return {...vote, votes: res.data.votes, userVotes: res.data.userVotes}
         })
       })
-      .then(() => history.push(`/votes/${vote.motionInfo[0].id}`))
       .catch(err => console.log(err))
     //if vote does not exist, add it with either 'yea' or nay'
   }
