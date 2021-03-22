@@ -60,8 +60,8 @@ export default function YourMP(props) {
               <div class="overview-item-title">They voted</div>
 
               <div class="result">
-                {userMp.voted_yea && <ResultBadge result="Agreed To" />}
-                {userMp.voted_nay && <ResultBadge result="Negatived" />}
+                {userMp.voted_yea && <ResultBadge result="Yea" />}
+                {userMp.voted_nay && <ResultBadge result="Nay" />}
                 {!userMp.voted_yea && !userMp.voted_nay && <div>Paired</div>}
               </div>
             </div>
