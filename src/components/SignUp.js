@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
-import PostcodeSearch from "./PostcodeSearch";
+import Search from "./Search";
 import axios from "axios";
 import Results from "./Results";
 import "./SignUp.scss";
@@ -62,7 +62,7 @@ export default function SignUp(props) {
         <br />
       </label>
       <label>
-        Password
+        Password: 
         <input
           type="password"
           name="password"
@@ -72,11 +72,9 @@ export default function SignUp(props) {
         <br />
       </label>
       <label>
-        Find your MP (optional)
         <br />
         <br />
-        Enter your postal code:
-        <main></main>
+        <Search />
       </label>
       <input type="submit" value="Submit" />
     </form>

@@ -1,3 +1,18 @@
 .sign-up {
   padding-top: 100px;
+  color: rgb(70, 70, 70);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin: 3rem;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
