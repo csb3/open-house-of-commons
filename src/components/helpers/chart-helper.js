@@ -17,13 +17,11 @@ const getChartParams = function (props) {
   }
   
   if (type === "User Votes") {
-    console.log("Props in OHOC Users Voted: ", props);
     chartParams.data = [
       props.userVotes[0].yesvotes,
       props.userVotes[0].novotes
     ];
   }
-  console.log("chart type: ", type);
   if (type === '"Yes" Votes By Party' || type === '"No" Votes By Party') {
     chartParams.borderColors = [
       "#D71920",
@@ -48,13 +46,12 @@ const getChartParams = function (props) {
   } else if (type === "How MPs Voted" || type === "User Votes") {
     chartParams.labels = [`Yes`, `No`];
     chartParams.borderColors = [
-      "rgba(153, 102, 255, 1)",
-      "rgba(255, 206, 86, 1)"
+      "#2FAA1B",
+      "#AA2F1B"
     ];
-    chartParams.backgroundColors = [
-      "rgba(153, 102, 255, 0.2)",
-      "rgba(255, 206, 86, 0.2)"
-    ];
+    chartParams.backgroundColors = chartParams.borderColors.map(
+      (color) => color + "66"
+    );
   }
 
   if (type === '"Yes" Votes By Party') {
@@ -120,6 +117,9 @@ const getChartParams = function (props) {
       title: {
         display: true,
         text: type
+      },
+      plugins: {
+        datalabels: false
       }
     }
   };

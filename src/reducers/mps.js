@@ -20,6 +20,7 @@ export default function reducer(state, action) {
     SET_PARTY: () => ({
       ...state,
       party,
+      page: 1,
     }),
 
     SET_PAGE: () => ({
@@ -30,6 +31,7 @@ export default function reducer(state, action) {
     SET_SEARCH: () => ({
       ...state,
       search,
+      page: 1,
     })
   };
 

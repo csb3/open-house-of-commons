@@ -1,0 +1,179 @@
+.center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+.mp-activity-container {
+  background-image: url('./../../images/chambers.jpeg');
+  background-repeat: no-repeat;
+  background-position: 50% -20%;
+  
+  width: 50%;
+  float: left;
+
+  background-color: #EBEFF4;
+}
+
+.mp-picture {
+  border-radius: 15px;
+}
+
+.mp-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.mp-info-container {
+  width: 50%;
+  max-width: 50%;
+
+  margin-top: 80px;
+  padding: 80px;
+  float: right;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow-y: scroll;
+
+  background-color: #FFFFFF;
+}
+
+.mp-overview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40px;
+  gap: 25px;
+
+  background-color: #EBEFF4;
+  max-width: 500px;
+  padding: 25px;
+  border-radius: 25px;
+}
+
+.mp-page-badge {
+  background-color: #FFFFFF;
+  border-radius: 25px;
+}
+
+.recent-votes {
+  background-color: #EBEFF4;
+  min-height: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+  padding: 15px;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+  }
+}
+
+.dropdown {
+  height: 20px;
+  color: #4E4E4E;
+
+  &:hover {
+    color: #71F7B1
+  }
+}
+
+
+
+
+
+
+
+
+
+// .mp-page {
+//   text-align: center;
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   margin-top: 10rem;
+
+//   &__profile {
+//     width: 30%;
+//     border-radius: 15px;
+//     padding: 20px;
+//     background: #F0F0F0;
+//     max-height: 340px;
+//     height: 340px;
+
+//     &-main {
+//       display: flex;
+//       justify-content: space-around;
+//       margin-bottom: 20px;
+
+//       &-img {
+//         border-radius: 15px;
+//       }
+
+//       &-detail {
+//         text-align: center;
+
+//         h2 {
+//           color: black;
+//         }
+//       }
+//     }
+//   }
+  
+//   &__partyflag {
+//     height: 5rem;
+//   }
+  
+//   &__votes {
+//     width: 45%;
+
+//   }
+// }
+
+// .mp-vote {
+//   text-align: left;
+//   border-radius: 10px;
+//   margin: 10px;
+//   padding: 5px;
+//   &.nay {
+//     background-color: #ff000033;
+//     &::after {
+//       content: "  Voted Nay"
+//     }
+//   }
+//   &.yea {
+//     background-color: #00800033;
+//     &::after {
+//       content: "  Voted Yea"
+//     }
+//   }
+
+// }
+// .motion {
+//   text-align: left;
+//   border-radius: 10px;
+//   margin: 10px;
+//   padding: 5px;
+
+//   &.agreed {
+//     background-color: #00800033;
+//     &::after {
+//       content: "Agreed To"
+//     }
+//   }
+//   &.negatived {
+//     background-color: #ff000033;
+//     &::after {
+//       content: "Negatived"
+//     }
+//   }
+// }

@@ -26,7 +26,7 @@ export default function PartyBadge(props) {
           <div>Conservative</div>
         </div>
       );
-    case "Green":
+    case "Green Party":
       return (
         <div class="party-badge green-badge">
           <div class="party-logo"><img src={Green} height="15px" /></div>
@@ -46,6 +46,10 @@ export default function PartyBadge(props) {
           <div class="party-logo"><img src={NDP} width="25px" /></div>
           <div>NDP</div>
         </div>
+      );
+    default:
+      return (
+        <div><br/></div>
       );
   }
 }

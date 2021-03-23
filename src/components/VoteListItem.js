@@ -2,12 +2,18 @@ import classnames from 'classnames';
 import { useHistory } from "react-router-dom";
 import './VoteListItem.scss';
 
+import ResultBadge from './../components/votes/badge/ResultBadge';
+
 export default function VoteListItem(props) {
   const history = useHistory();
   const result = props.result === 'Agreed To' ? '-agreedto' : '-negatived';
   const voteClass = classnames({
     [`vote-list-item__header${result}`]: true
   });
+
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const date = new Date(props.date.toString());
+  const dateStyled = date.toLocaleDateString(undefined, options);
   
   const handleClick = () => history.push(`/votes/${props.id}`);
 
@@ -24,9 +30,11 @@ export default function VoteListItem(props) {
         </h4>
       </header>
       <div className="vote-list-item__summary">
-        <div className="vote-list-item__date">({props.date})</div>
-        {props.summary.length > 50
-           ? props.summary.slice(0, 49) + '...'
+        <div className="vote-list-item__date">{dateStyled}</div>
+      </div>
+      <div class="vote-list-item__desc">
+        {props.summary.length > 90
+           ? props.summary.slice(0, 89) + '...'
            : props.summary}
       </div>
     </div>

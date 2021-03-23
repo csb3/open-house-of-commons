@@ -6,6 +6,7 @@ import ConstituencyBadge from "../badge/ConstituencyBadge";
 import FlagBadge from "../badge/FlagBadge";
 import PartyBadge from "../badge/PartyBadge";
 import ResultBadge from "../badge/ResultBadge";
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt, faQuestionCircle, faUser, faClipboard } from '@fortawesome/free-regular-svg-icons';
@@ -29,7 +30,7 @@ export default function OverviewInfo(props) {
           <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faQuestionCircle} /></div>
           <div class="overview-item-title">Bill information</div>
-          <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about {motionInfo.bill_num} here</a></div>
+          <div class="overview-item-desc"><a href={motionInfo.bill_url}>read about Bill {motionInfo.bill_num} here</a></div>
         </div>
         }
         
@@ -39,7 +40,7 @@ export default function OverviewInfo(props) {
           <div class="overview-item-title-mp">Motion sponsor</div>
           <div class="overview-item-desc">
             <div>
-              {motionInfo.first_name} {motionInfo.last_name}
+              <Link to={`/mps/${motionInfo.mp_id}`}>{motionInfo.first_name} {motionInfo.last_name}</Link>
             </div>
             <div class="badges">
               <div><PartyBadge party={motionInfo.party_name} /></div>
@@ -52,7 +53,7 @@ export default function OverviewInfo(props) {
         <div class="overview-item">
           <div class="overview-icon"><FontAwesomeIcon icon={faClipboard} /></div>
           <div class="overview-item-title">Results</div>
-          <div><ResultBadge result={motionInfo.result} /></div>
+          <div class="result"><ResultBadge result={motionInfo.result} /></div>
         </div>
       </div>
     );

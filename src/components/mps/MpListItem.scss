@@ -2,22 +2,24 @@
 
 .mp-list-item {
   width: 300px;
-  min-width: 300px;
-  border-radius: 3px 20px 20px 74px;
-  margin: 7.5px 0px 7.5px 0px;
-  padding: 0px;
+  min-width: 250px;
+  width: 350px;
+  border-radius: 15px;
+  margin: 10px;
+  padding-bottom: 5px;
 
   &__main {
-    border-radius: 70px 15px 15px 70px;
-    padding: 5px;
+    border-radius: 15px;
+    padding: 15px;
     height: 180px;
-    border: 3px solid white;
+    border: 3px solid #FFFFFF;
     display: flex;
     justify-content: flex-start;
-    background: #fff;
+    background: #FFFFFF;
     
     img {
-      border-radius: 80px;
+      border-radius: 15px;
+      margin-right: 5px;
     }
     
     h3 {
@@ -178,4 +180,18 @@
       }
     }
   }
+}
+
+.mp-party {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  max-width: 180px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.list-party {
+  display: none;
 }
