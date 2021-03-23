@@ -26,6 +26,7 @@ export default function Nav(props) {
   }
 
   return (
+      <Router forceRefresh={true}>
   <div className="nav">
     <div className="nav--left">
       <img
@@ -33,20 +34,19 @@ export default function Nav(props) {
         alt="Open House of Commons Logo"
         width="9%"
       />
-      <div>Open House of Commons</div>
+      <Link to="/">Open House of Commons</Link>
     </div>
 
     <div className="nav--right">
        {cookies.Email &&  <span>{`Logged in as ${cookies.Email}`}</span>}
-      <Router forceRefresh={true}>
         <Link to="/">Home</Link>
         <Link to="/votes">Votes</Link>
         <Link to="/mps">MPs</Link>
         {!cookies.Email && <button className="nav--button" onClick={login}>Log In</button>}
         {cookies.Email && <button className="nav--button" onClick={logout}>Log Out</button>}
         
-      </Router>
     </div>
   </div>
+      </Router>
   );
 }
