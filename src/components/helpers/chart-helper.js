@@ -17,13 +17,11 @@ const getChartParams = function (props) {
   }
   
   if (type === "User Votes") {
-    console.log("Props in OHOC Users Voted: ", props);
     chartParams.data = [
       props.userVotes[0].yesvotes,
       props.userVotes[0].novotes
     ];
   }
-  console.log("chart type: ", type);
   if (type === '"Yes" Votes By Party' || type === '"No" Votes By Party') {
     chartParams.borderColors = [
       "#D71920",
@@ -120,6 +118,9 @@ const getChartParams = function (props) {
       title: {
         display: true,
         text: type
+      },
+      plugins: {
+        datalabels: false
       }
     }
   };

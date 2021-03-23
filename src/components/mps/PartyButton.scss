@@ -1,300 +1,253 @@
 @import './../partyColorCodes.scss';
 
 .button {
-  border-radius: 40px;
-  font-size: 1rem;
-  height: 40px;
+  border-radius: 50px;
+  padding: 5px 15px 5px 15px;
   line-height: 1.2rem;
   margin-right: 1rem;
-  width: 130px;
-  border: 5px solid white;
   color: white;
+  box-shadow: 1px 1px 10px 0px #4E4E4E;
+  background-color: #949494;
 
   &.Accountability {
-    background: $Accountability;
-
     &:hover {
-      border: 2px solid $Accountability;
+      background: $Accountability;
     }
 
     &.selected {
-      border-color: $Accountability;
+      background: $Accountability;
     }
   }
 
   &.Alliance {
-    background: $Alliance;
-
     &:hover {
-      border: 2px solid $Alliance;
+      background: $Alliance;
     }
 
     &.selected {
-      border-color: $Alliance;
+      background: $Alliance;
     }
   }
 
   &.Animal {
-    background: $Animal;
-
     &:hover {
-      border: 2px solid $Animal;
+      background: $Animal;
     }
 
     &.selected {
-      border-color: $Animal;
+      background: $Animal;
     }
   }
 
   &.Bloc {
-    background: $Bloc;
-
     &:hover {
-      border: 2px solid $Bloc;
+      background: $Bloc;
     }
 
     &.selected {
-      border-color: $Bloc;
+      background: $Bloc;
     }
   }
 
   &.Canada {
-    background: $Canada;
-
     &:hover {
-      border: 2px solid $Canada;
+      background: $Canada;
     }
 
     &.selected {
-      border-color: $Canada;
+      background: $Canada;
     }
   }
 
   &.Canadian {
-    background: $Canadian;
-
     &:hover {
-      border: 2px solid $Canadian;
+      background: $Canadian;
     }
 
     &.selected {
-      border-color: $Canadian;
+      background: $Canadian;
     }
   }
 
   &.Christian {
-    background: $Christian;
-
     &:hover {
-      border: 2px solid $Christian;
+      background: $Christian;
     }
 
     &.selected {
-      border-color: $Christian;
+      background: $Christian;
     }
   }
 
   &.Communist {
-    background: $Communist;
-
     &:hover {
-      border: 2px solid $Communist;
+      background: $Communist;
     }
 
     &.selected {
-      border-color: $Communist;
+      background: $Communist;
     }
   }
 
   &.Conservative {
-    background: $Conservative;
+    
 
     &:hover {
-      border: 2px solid $Conservative;
+      background: $Conservative;
     }
 
     &.selected {
-      border-color: $Conservative;
+      background: $Conservative;
     }
   }
 
   &.Democratic {
-    background: $Democratic;
-
     &:hover {
-      border: 2px solid $Democratic;
+      background: $Democratic;
     }
 
     &.selected {
-      border-color: $Democratic;
+      background: $Democratic;
     }
   }
 
   &.Forces {
-    background: $Forces;
-
     &:hover {
-      border: 2px solid $Forces;
+      background: $Forces;
     }
 
     &.selected {
-      border-color: $Forces;
+      background: $Forces;
     }
   }
 
   &.Green {
-    background: $Green;
-
     &:hover {
-      border: 2px solid $Green;
+      background: $Green;
     }
 
     &.selected {
-      border-color: $Green;
+      background: $Green;
     }
   }
 
   &.Liberal {
-    background: $Liberal;
-
     &:hover {
-      border: 2px solid $Liberal;
+      background: $Liberal;
     }
 
     &.selected {
-      border-color: $Liberal;
+      background: $Liberal;
     }
   }
 
   &.Libertarian {
-    background: $Libertarian;
-
     &:hover {
-      border: 2px solid $Libertarian;
+      background: $Libertarian;
     }
 
     &.selected {
-      border-color: $Libertarian;
+      background: $Libertarian;
     }
   }
 
   &.Marijuana {
-    background: $Marijuana;
-
     &:hover {
-      border: 2px solid $Marijuana;
+      background: $Marijuana;
     }
 
     &.selected {
-      border-color: $Marijuana;
+      background: $Marijuana;
     }
   }
 
   &.Marxist-Leninist {
-    background: $Marxist-Leninist;
-
     &:hover {
-      border: 2px solid $Marxist-Leninist;
+      background: $Marxist-Leninist;
     }
 
     &.selected {
-      border-color: $Marxist-Leninist;
+      background: $Marxist-Leninist;
     }
   }
 
   &.NDP {
-    background: $NDP;
-
     &:hover {
-      border: 2px solid $NDP;
+      background: $NDP;
     }
 
     &.selected {
-      border-color: $NDP;
+      background: $NDP;
     }
   }
 
   &.Pirate {
-    background: $Pirate;
-
     &:hover {
-      border: 2px solid $Pirate;
+      background: $Pirate;
     }
 
     &.selected {
-      border-color: $Pirate;
+      background: $Pirate;
     }
   }
 
   &.Progressive {
-    background: $Progressive;
-
     &:hover {
-      border: 2px solid $Progressive;
+      background: $Progressive;
     }
 
     &.selected {
-      border-color: $Progressive;
+      background: $Progressive;
     }
   }
 
   &.Rhinoceros {
-    background: $Rhinoceros;
-
     &:hover {
-      border: 2px solid $Rhinoceros;
+      background: $Rhinoceros;
     }
 
     &.selected {
-      border-color: $Rhinoceros;
+      background: $Rhinoceros;
     }
   }
 
   &.Seniors {
-    background: $Seniors;
-
     &:hover {
-      border: 2px solid $Seniors;
+      background: $Seniors;
     }
 
     &.selected {
-      border-color: $Seniors;
+      background: $Seniors;
     }
   }
 
   &.The {
-    background: $The;
-
     &:hover {
-      border: 2px solid $The;
+      background: $The;
     }
 
     &.selected {
-      border-color: $The;
+      background: $The;
     }
   }
 
   &.United {
-    background: $United;
-
     &:hover {
-      border: 2px solid $United;
+      background: $United;
     }
 
     &.selected {
-      border-color: $United;
+      background: $United;
     }
   }
 
   &.Independent {
-    background: $Independent;
-
     &:hover {
-      border: 2px solid $Independent;
+      background: $Independent;
     }
 
     &.selected {
-      border-color: $Independent;
+      background: $Independent;
     }
   }
 }

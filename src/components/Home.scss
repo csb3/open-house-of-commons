@@ -1,17 +1,69 @@
-.home {
-  font-size: 1.25rem;
-  color:#9B7EC8;
+h1 {
+  color: #3C6797;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  color: #3C6797;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+}
+
+.about {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-right: 50px;
+
   display: flex;
-  flex-flow: column;
-  padding: 5rem;
-  &--left {
-    align-self: flex-start;
-    width: 50%;
-    padding: 1rem;
-  }
-  &--right {
-    align-self: flex-end;
-    width: 50%;
-    padding: 1rem;
-  }
+  flex-direction: column;
+  gap: 15px;
+}
+
+.get-involved {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-right: 50px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.home-left-container {
+  width: 50%;
+  max-width: 50%;
+
+  margin-top: 80px;
+  padding: 80px;
+  float: right;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  overflow-y: hidden;
+
+  background-color: #FFFFFF;
+}
+
+.home-right-container {
+  background-image: url('./../images/people.svg');
+  background-repeat: no-repeat;
+  background-position: 50% 90%;
+  
+  width: 50%;
+  float: left;
+
+  background-color: #EBEFF4;
+}
+
+.maple {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  font-size: 0.5em;
+
+  display: flex;
+  flex-direction: column;
+  text-align: right;
 }

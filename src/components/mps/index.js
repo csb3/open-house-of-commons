@@ -29,8 +29,13 @@ export default function Mps() {
         <Route path="/mps/:id" component={Mp} />
         <Route path="/mps">
           <section className="mps-main">
-            <header className="mps-main__header">
-              <div className="mps-main__search-bar">Searching bar
+            <header className="vote-list__header">
+              <h1 class="votes-header">Members of Parliament</h1>
+              <h2 class="votes-sub-header">43rd Parliament, Session 2</h2>
+            </header>
+
+            <div className="mps-main__header">
+              <div className="mps-main__search-bar">
                 <form autoComplete="off" onSubmit={event => event.preventDefault()}>
                   <input
                     className="mps-main__search-bar-input"
@@ -39,17 +44,18 @@ export default function Mps() {
                     value={state.search}
                     data-testid="mp-search-input"
                     onChange={event => setSearch(event.target.value)}
+                    placeholder="Search"
                   />
                 </form>
               </div>
-              <div className="mps-main__button">Parties
+              <div className="mps-main__button">
                 {state.parties.map(
                   party => party === state.party
                     ? <PartyButton key={party} selected party={party} onClick={() => setParty(party)}>{party}</PartyButton>
                     : <PartyButton key={party} party={party} onClick={() => setParty(party)}>{party}</PartyButton>
                 )}
               </div>
-            </header>
+            </div>
             <MpList
               mps={mps}
               history={history}
