@@ -54,8 +54,8 @@ export default function UserVote(props) {
         <div class={props.userView? "display-collapse": "display-close"}>
           <UserVoteMatcher data={props} />
           <div class="user-vote-charts">
-            <UserVoteSummary data={props} />
             <MPVoteSummary data={props} />
+            <UserVoteSummary data={props} />
           </div>
         </div>
       </div>

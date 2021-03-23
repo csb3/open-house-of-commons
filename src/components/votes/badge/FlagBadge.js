@@ -60,7 +60,7 @@ export default function FlagBadge(props) {
           <div>{props.loc}</div>
         </div>
       );
-    case "NovaScotia":
+    case "Nova Scotia":
       return (
         <div class="flag-badge">
           <div class="flag-icon"><img src={NovaScotia} alt="" width="25px" height="15px" /></div>
@@ -108,6 +108,10 @@ export default function FlagBadge(props) {
           <div class="flag-icon"><img src={Yukon} alt="" width="25px" height="15px" /></div>
           <div>{props.loc}</div>
         </div>
+      );
+    default:
+      return (
+        <div><br/></div>
       );
   }
 }

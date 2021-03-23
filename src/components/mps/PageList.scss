@@ -1,4 +1,32 @@
+.pages-icon {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #949494;
+}
+
+.pages-icon:hover {
+  color: #71F7B1;
+}
+
 .pages-main {
   display: flex;
   align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  margin-bottom: 80px;
+
+  color: #FFFFFF;
+}
+
+.pages-num {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  margin-left: 15px;
 }

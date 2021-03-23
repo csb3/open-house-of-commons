@@ -3,27 +3,31 @@ import classnames from "classnames";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCheck,
+  faEquals,
   faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import "./Mp.scss";
 import Vote from '../Vote';
 
 export default function SponListItem(props) {
-  const motionClass = classnames("motion", {"agreed": props.result === "Agreed To", "negatived": props.result === "Negatived"});
-
   return (
     <Router forceRefresh={true}>
-      <div className={motionClass}>
-        <p>{props.summary}</p>
-        <br />
-        <Link to={`/votes/${props.id}`}>Vote No. {props.vote_num}</Link>
-        {`\u00A0\u00A0\u00A0\u00A0`} 
-        {props.result === "Agreed To" && <FontAwesomeIcon icon={faCheck} />}
-        {props.nay === "Negatived" && <FontAwesomeIcon icon={faTimes} />}
-      </div>
+      <Link to={`/votes/${props.id}`} style={{ textDecoration: 'none' }}>
+        <div class="vote-list-container" onClick={props.linkTo}>
+          <div class="vote-list-header">
+            <div class="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
+          
+            {props.result==="Negatived" && <div class="vote-disagree">Resulted in disagreed to <FontAwesomeIcon icon={faCheck} /></div>}
+            {props.result==="Agreed To" && <div class="vote-agree">Resulted in agreed to <FontAwesomeIcon icon={faTimes} /></div>}
+          </div>
+        
+          <div class="vote-list-summary">{props.summary}</div>
+        </div>
+      </Link>
+
       <Switch>
-        <Route path="votes/:id" component={Vote} />
+        <Route path="/votes/:id" component={Vote} />
       </Switch>
     </Router>
-  )
+  );
 }

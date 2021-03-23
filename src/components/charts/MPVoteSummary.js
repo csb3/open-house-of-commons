@@ -17,17 +17,17 @@ export default function UserVoteSummary(props) {
   useEffect(() => {
     const ctx = document.getElementById("mpSummaryChart");
     new Chart(ctx, {
-      type: "doughnut",
+      type: "pie",
       ticks: {
         min: 0
       },
       data: {
-        labels: ["Yea", "Nay"],
+        labels: ["Yes", "No"],
         datasets: [
           {
             data: [mpYeaVotes, mpNayVotes],
-            backgroundColor: ["#2FAA1B", "#AA2F1B"],
-            borderColor: ["#83C469", "#C36E64"],
+            backgroundColor: ["#A8DB9D", "#DAA79D"],
+            borderColor: ["#2FAA1B", "#AA2F1B"],
             border: 1
           },
         ],
@@ -53,7 +53,7 @@ export default function UserVoteSummary(props) {
               let percentage = ((value / sum)*100).toFixed(1) + "%";
               return percentage;
             },
-            color: '#FFFFFF',
+            color: '#4E4E4E',
           }
         }
       }         
