@@ -39,6 +39,7 @@ export default function Nav(props) {
 
     <div className="nav--right">
        {cookies.Email &&  <span>{`Logged in as ${cookies.Email}`}</span>}
+       {!cookies.Email && <Link to="/signup">Sign Up</Link>}
         <Link to="/">Home</Link>
         <Link to="/votes">Votes</Link>
         <Link to="/mps">MPs</Link>
