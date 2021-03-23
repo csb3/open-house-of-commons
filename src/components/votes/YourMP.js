@@ -1,5 +1,6 @@
 import React from "react";
 import { useCookies } from 'react-cookie';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 import ConstituencyBadge from "./badge/ConstituencyBadge";
 import FlagBadge from "./badge/FlagBadge";
@@ -31,6 +32,7 @@ export default function YourMP(props) {
     for (let mpVote in votes) {
       if (userConstId === votes[mpVote].constituency_id) {
         userMp = votes[mpVote];
+        console.log("userMP: ", userMp);
         break; 
       } 
     }
@@ -45,7 +47,7 @@ export default function YourMP(props) {
               <div class="overview-item-title-mp">Your MP is</div>
               <div class="overview-item-desc">
                 <div>
-                  {userMp.first_name} {userMp.last_name}
+                  <Link to={`/mps/${userMp.mp_id}`}>{userMp.first_name} {userMp.last_name} </ Link>
                 </div>
                 <div class="badges">
                   <div><PartyBadge party={userMp.party_name} /></div>
@@ -60,8 +62,8 @@ export default function YourMP(props) {
               <div class="overview-item-title">They voted</div>
 
               <div class="result">
-                {userMp.voted_yea && <ResultBadge result="Agreed To" />}
-                {userMp.voted_nay && <ResultBadge result="Negatived" />}
+                {userMp.voted_yea && <ResultBadge result="Yea" />}
+                {userMp.voted_nay && <ResultBadge result="Nay" />}
                 {!userMp.voted_yea && !userMp.voted_nay && <div>Paired</div>}
               </div>
             </div>
