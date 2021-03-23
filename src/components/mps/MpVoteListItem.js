@@ -20,8 +20,8 @@ export default function MpVoteListItem(props) {
             <div class="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
           
             {props.vote_paired && <div class="vote-paired">Vote paired <FontAwesomeIcon icon={faEquals} /></div>}
-            {props.yea && <div class="vote-disagree">Voted nay <FontAwesomeIcon icon={faCheck} /></div>}
-            {props.nay && <div class="vote-agree">Voted yea <FontAwesomeIcon icon={faTimes} /></div>}
+            {props.yea && <div class="vote-disagree">Voted no <FontAwesomeIcon icon={faCheck} /></div>}
+            {props.nay && <div class="vote-agree">Voted yes <FontAwesomeIcon icon={faTimes} /></div>}
           </div>
         
           <div class="vote-list-summary">{props.summary}</div>
