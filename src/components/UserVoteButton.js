@@ -9,7 +9,8 @@ export default function UserVoteButton(props) {
   const [vote, setVote] = useState();
   const buttonClassName = classnames("vote-button", {selected: props.selected, yea: props.name==="Yes", nay: props.name==="No"})
   useEffect(() => {
-    axios.get(`/api/votes/${props.motionInfo[0].Id}`, {params: {userId: cookies.Id}})
+    console.log("Props in userVoteButton: ", props);
+    axios.get(`/api/votes/${props.motionInfo[0].id}`, {params: {userId: cookies.Id}})
       .then(vote => {
         setVote(() => {
           return (

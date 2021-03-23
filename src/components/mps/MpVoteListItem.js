@@ -9,20 +9,25 @@ import "./Mp.scss";
 import classnames from "classnames";
 import Vote from '../Vote';
 
+import "./MpVoteListItem.scss"
+
 export default function MpVoteListItem(props) {
-  const mpVoteClass = classnames("mp-vote", {"nay": props.nay, "yea": props.yea})
   return (
     <Router forceRefresh={true}>
-      <div className={mpVoteClass} onClick={props.linkTo}>
-        {props.summary}
-        <br />
-        <br />
-        <Link to={`/votes/${props.id}`}>{`Vote No. ${props.vote_num}`}</Link>
-        {`\u00A0\u00A0\u00A0\u00A0`} 
-        {props.vote_paired && <FontAwesomeIcon icon={faEquals} />}
-        {props.yea && <FontAwesomeIcon icon={faCheck} />}
-        {props.nay && <FontAwesomeIcon icon={faTimes} />}
+      <div class="vote-list-container" onClick={props.linkTo}>
+        <Link to={`/votes/${props.id}`} style={{ textDecoration: 'none' }}>
+          <div class="vote-list-header">
+            <div class="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
+          
+            {props.vote_paired && <div class="vote-paired">Vote paired <FontAwesomeIcon icon={faEquals} /></div>}
+            {props.yea && <div class="vote-agree">Voted yes <FontAwesomeIcon icon={faCheck} /></div>}
+            {props.nay && <div class="vote-disagree">Voted no <FontAwesomeIcon icon={faTimes} /></div>}
+          </div>
+        
+          <div class="vote-list-summary">{props.summary}</div>
+        </Link>
       </div>
+
       <Switch>
         <Route path="/votes/:id" component={Vote} />
       </Switch>
