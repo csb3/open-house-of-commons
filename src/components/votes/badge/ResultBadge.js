@@ -17,7 +17,7 @@ export default function ResultBadge(props) {
     return (
       <div class="disagree-badge">
         <div class="disagree-icon"><FontAwesomeIcon icon={faTimes} /></div>
-        <div class="result-text">Nay</div>
+        <div class="result-text">No</div>
       </div>
     );
     } else if (props.result === "Negatived") {
@@ -31,7 +31,7 @@ export default function ResultBadge(props) {
     return (
       <div class="agree-badge">
         <div class="agree-icon"><FontAwesomeIcon icon={faCheck} /></div>
-        <div class="result-text">Yea</div>
+        <div class="result-text">Yes</div>
       </div>
     );
   }
