@@ -1,9 +1,6 @@
 import MpVoteListItem from './MpVoteListItem';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faChevronCircleDown,
-  faChevronCircleUp,
-} from '@fortawesome/free-solid-svg-icons';
+
+import "./MpVoteList.scss"
 
 export default function MpVoteList(props) {
   const votes = props.votes.map(vote =>
@@ -18,13 +15,11 @@ export default function MpVoteList(props) {
     />
   );
 
-  const show = props.show ? votes : votes.slice(0, 5);
+  const show = props.show ? votes : votes.slice(0, 3);
 
   return (
     <div>
-      {!props.show && <FontAwesomeIcon onClick={props.showAll} icon={faChevronCircleDown} size={"2x"} />}
-      {props.show && <FontAwesomeIcon onClick={props.showAll} icon={faChevronCircleUp} size={"2x"} />}
-      <ul>{show}</ul>
+      <ul class="mp-votes-list">{show}</ul>
     </div>
   );
 }
