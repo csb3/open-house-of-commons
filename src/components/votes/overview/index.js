@@ -14,7 +14,7 @@ export default function Overview(props) {
     return (
       <div>
         <h2>Overview</h2>
-        <div class="overview-summary">{data.summary}</div>
+        <div className="overview-summary">{data.summary}</div>
   
         <div>
           <OverviewInfo data={props.data} />
@@ -23,7 +23,7 @@ export default function Overview(props) {
     );
   } else {
     return (
-      <div class="loading">
+      <div className="loading">
         <img src={loading} width="20%" />
       </div>
     )

@@ -61,7 +61,7 @@ export default function UserVoteSummary(props) {
   });
 
   return (
-    <div class="user-vote-chart-container">
+    <div className="user-vote-chart-container">
       <canvas id="mpSummaryChart" width="20" />
     </div>
   );

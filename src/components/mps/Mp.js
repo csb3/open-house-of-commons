@@ -20,50 +20,50 @@ export default function Mp() {
   } = useMpData(id);
   
   return (
-    <div class="split-containers">
-      <div class="mp-info-container">
+    <div className="split-containers">
+      <div className="mp-info-container">
         <h1>Member of Parliament</h1>
 
-        <div class="center">
-          <div class="mp-overview">
+        <div className="center">
+          <div className="mp-overview">
             <img 
               className="mp-picture"
               src={state.profile.thumbnail}
               alt={`${state.profile.first_name} ${state.profile.last_name}`}
             />
           
-            <div class="mp-info">
+            <div className="mp-info">
               <h2>{`${state.profile.first_name} ${state.profile.last_name}`}</h2>
 
-              <div class="badges">
-                <div class="mp-page-badge"><PartyBadge party={state.profile.party_name} /></div>
-                <div class="mp-page-badge"><FlagBadge loc={state.profile.location}/></div>
-                <div class="mp-page-badge"><ConstituencyBadge loc={state.profile.constituency} /></div>
+              <div className="badges">
+                <div className="mp-page-badge"><PartyBadge party={state.profile.party_name} /></div>
+                <div className="mp-page-badge"><FlagBadge loc={state.profile.location}/></div>
+                <div className="mp-page-badge"><ConstituencyBadge loc={state.profile.constituency} /></div>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="recent-votes-header">
+        <div className="recent-votes-header">
           <h2>Motions Sponsored</h2>
-          {!state.showAllSpons && <FontAwesomeIcon icon={faChevronDown} class="dropdown" onClick={() => setSpons(state.showAllSpons)} />}
-          {state.showAllSpons && <FontAwesomeIcon icon={faChevronUp} class="dropdown" onClick={() => setSpons(state.showAllSpons)} />}  
+          {!state.showAllSpons && <FontAwesomeIcon icon={faChevronDown} className="dropdown" onClick={() => setSpons(state.showAllSpons)} />}
+          {state.showAllSpons && <FontAwesomeIcon icon={faChevronUp} className="dropdown" onClick={() => setSpons(state.showAllSpons)} />}  
         </div>
-        <div class="recent-votes">
+        <div className="recent-votes">
           <SponList sponsored={state.sponsored} show={state.showAllSpons} />
         </div>
 
-        <div class="recent-votes-header">
+        <div className="recent-votes-header">
           <h2>Recent Votes</h2>
-          {!state.showAllVotes && <FontAwesomeIcon icon={faChevronDown} class="dropdown" onClick={() => setVotes(state.showAllVotes)} />}
-          {state.showAllVotes && <FontAwesomeIcon icon={faChevronUp} class="dropdown" onClick={() => setVotes(state.showAllVotes)} />}  
+          {!state.showAllVotes && <FontAwesomeIcon icon={faChevronDown} className="dropdown" onClick={() => setVotes(state.showAllVotes)} />}
+          {state.showAllVotes && <FontAwesomeIcon icon={faChevronUp} className="dropdown" onClick={() => setVotes(state.showAllVotes)} />}  
         </div>
-        <div class="recent-votes">
+        <div className="recent-votes">
           <MpVoteList votes={state.voted} show={state.showAllVotes} />
         </div>
       </div>
 
-      <div class="mp-activity-container"></div>
+      <div className="mp-activity-container"></div>
     </div>
   )
 }

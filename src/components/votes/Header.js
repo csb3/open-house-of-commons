@@ -18,16 +18,16 @@ export default function Header(props) {
     const dateStyled = date.toLocaleDateString(undefined, options);
 
     return (
-      <div class="header">
+      <div className="header">
         <h1>Vote No. {data.vote_num}</h1>
   
-        <div class="header-info">
-          <div class="header-info-session">
+        <div className="header-info">
+          <div className="header-info-session">
             <p>{data.parl_num}<sup>{parlNumOrdinal}</sup> Parliament</p>
             <p>{data.sess_num}<sup>{sessNumOrdinal}</sup> Session</p>
           </div>
   
-          <div class="header-info-date">
+          <div className="header-info-date">
             <p>Sitting No. {data.sitting_num}</p>
             <p>{dateStyled}</p>
           </div>
@@ -36,7 +36,7 @@ export default function Header(props) {
     );
   } else {
     return (
-      <div class="loading">
+      <div className="loading">
         <img src={loading} width="20%" />
       </div>
     )

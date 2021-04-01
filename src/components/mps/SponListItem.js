@@ -13,15 +13,15 @@ export default function SponListItem(props) {
   return (
     <Router forceRefresh={true}>
       <Link to={`/votes/${props.id}`} style={{ textDecoration: 'none' }}>
-        <div class="vote-list-container" onClick={props.linkTo}>
-          <div class="vote-list-header">
-            <div class="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
+        <div className="vote-list-container" onClick={props.linkTo}>
+          <div className="vote-list-header">
+            <div className="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
           
-            {props.result==="Negatived" && <div class="vote-disagree">Resulted in disagreed to <FontAwesomeIcon icon={faCheck} /></div>}
-            {props.result==="Agreed To" && <div class="vote-agree">Resulted in agreed to <FontAwesomeIcon icon={faTimes} /></div>}
+            {props.result==="Negatived" && <div className="vote-disagree">Resulted in disagreed to <FontAwesomeIcon icon={faCheck} /></div>}
+            {props.result==="Agreed To" && <div className="vote-agree">Resulted in agreed to <FontAwesomeIcon icon={faTimes} /></div>}
           </div>
         
-          <div class="vote-list-summary">{props.summary}</div>
+          <div className="vote-list-summary">{props.summary}</div>
         </div>
       </Link>
 

@@ -27,8 +27,8 @@ export default function Votes() {
           className="vote-list"
         >
           <header className="vote-list__header">
-            <h1 class="votes-header">Votes</h1>
-            <h2 class="votes-sub-header">43rd Parliament, Session 2</h2>
+            <h1 className="votes-header">Votes</h1>
+            <h2 className="votes-sub-header">43rd Parliament, Session 2</h2>
           </header>
           <article className="vote-list__main">
             {votes.map(vote => (

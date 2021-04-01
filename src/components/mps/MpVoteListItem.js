@@ -14,17 +14,17 @@ import "./MpVoteListItem.scss"
 export default function MpVoteListItem(props) {
   return (
     <Router forceRefresh={true}>
-      <div class="vote-list-container" onClick={props.linkTo}>
+      <div className="vote-list-container" onClick={props.linkTo}>
         <Link to={`/votes/${props.id}`} style={{ textDecoration: 'none' }}>
-          <div class="vote-list-header">
-            <div class="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
+          <div className="vote-list-header">
+            <div className="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
           
-            {props.vote_paired && <div class="vote-paired">Vote paired <FontAwesomeIcon icon={faEquals} /></div>}
-            {props.yea && <div class="vote-disagree">Voted no <FontAwesomeIcon icon={faCheck} /></div>}
-            {props.nay && <div class="vote-agree">Voted yes <FontAwesomeIcon icon={faTimes} /></div>}
+            {props.vote_paired && <div className="vote-paired">Vote paired <FontAwesomeIcon icon={faEquals} /></div>}
+            {props.yea && <div className="vote-disagree">Voted no <FontAwesomeIcon icon={faCheck} /></div>}
+            {props.nay && <div className="vote-agree">Voted yes <FontAwesomeIcon icon={faTimes} /></div>}
           </div>
         
-          <div class="vote-list-summary">{props.summary}</div>
+          <div className="vote-list-summary">{props.summary}</div>
         </Link>
       </div>
 

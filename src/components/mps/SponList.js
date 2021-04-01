@@ -16,7 +16,7 @@ export default function SponList(props) {
 
   return (
     <div>
-      {show && <ul class="mp-votes-list">{show}</ul>}
+      {show && <ul className="mp-votes-list">{show}</ul>}
       {show.length===0 && <div><em>This MP hasn't sponsored any motions yet.</em></div>}
     </div>
   );

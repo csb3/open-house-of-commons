@@ -32,7 +32,7 @@ export default function VoteListItem(props) {
       <div className="vote-list-item__summary">
         <div className="vote-list-item__date">{dateStyled}</div>
       </div>
-      <div class="vote-list-item__desc">
+      <div className="vote-list-item__desc">
         {props.summary.length > 90
            ? props.summary.slice(0, 89) + '...'
            : props.summary}

@@ -67,15 +67,15 @@ export default function Page(props) {
 
   return (
     <div className="pages-main">
-      <div class="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('leftest')} icon={faAngleDoubleLeft} /></div>
+      <div className="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('leftest')} icon={faAngleDoubleLeft} /></div>
       {`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`} 
-      <div class="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('left')} icon={faAngleLeft} /></div>
+      <div className="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('left')} icon={faAngleLeft} /></div>
 
-      <div class="pages-num">{pageOrder(page, pages)}</div>
+      <div className="pages-num">{pageOrder(page, pages)}</div>
 
-      <div class="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('right')} icon={faAngleRight} /></div>
+      <div className="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('right')} icon={faAngleRight} /></div>
       {`\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0\u00A0`} 
-      <div class="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('rightest')} icon={faAngleDoubleRight} /></div>
+      <div className="pages-icon"><FontAwesomeIcon onClick={() => jumpPage('rightest')} icon={faAngleDoubleRight} /></div>
     </div>
   );
 }

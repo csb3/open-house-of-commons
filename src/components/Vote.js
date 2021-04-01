@@ -68,9 +68,9 @@ export default function Vote(props) {
   return (
     <div>
 
-    <div class="split-containers">
-      <div class="vote-info-container">
-        <div class="vote-info-components">
+    <div className="split-containers">
+      <div className="vote-info-container">
+        <div className="vote-info-components">
           <Header data={vote} />
           <Overview data={vote} />
           <YourMP
@@ -79,7 +79,7 @@ export default function Vote(props) {
         </div>
       </div>
 
-      <div class="vote-charts-container">
+      <div className="vote-charts-container">
         <ChartBar {...vote} onClick={setChartView}/>
           {vote.voteInfo && vote.chartView === "Overview" && <ChartGrid {...vote}></ChartGrid>}
           {vote.voteInfo && vote.chartView === "How MPs Voted" && <Chart {...vote} chartType="How MPs Voted" display="true"></Chart>}

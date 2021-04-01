@@ -7,9 +7,9 @@ import "../badge/ConstituencyBadge.scss";
 
 export default function ConstituencyBadge(props) {
   return (
-    <div class="constituency-badge">
-      <div class="constituency-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></div>
-      <div class="constituency-name">{props.loc}</div>
+    <div className="constituency-badge">
+      <div className="constituency-icon"><FontAwesomeIcon icon={faMapMarkerAlt} /></div>
+      <div className="constituency-name">{props.loc}</div>
     </div>
   );
 }

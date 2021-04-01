@@ -14,36 +14,36 @@ export default function PartyBadge(props) {
   switch (party) {
     case "Bloc Québécois":
       return (
-        <div class="party-badge bloc-quebecois-badge">
-          <div class="party-logo"><img src={BlocQuebecois} height="15px" /></div>
+        <div className="party-badge bloc-quebecois-badge">
+          <div className="party-logo"><img src={BlocQuebecois} height="15px" /></div>
           <div>Bloc Québécois</div>
         </div>
       );
     case "Conservative":
       return (
-        <div class="party-badge conservative-badge">
-          <div class="party-logo"><img src={Conservative} height="15px" /></div>
+        <div className="party-badge conservative-badge">
+          <div className="party-logo"><img src={Conservative} height="15px" /></div>
           <div>Conservative</div>
         </div>
       );
     case "Green Party":
       return (
-        <div class="party-badge green-badge">
-          <div class="party-logo"><img src={Green} height="15px" /></div>
+        <div className="party-badge green-badge">
+          <div className="party-logo"><img src={Green} height="15px" /></div>
           <div>Green</div>
         </div>
       );
     case "Liberal":
       return (
-        <div class="party-badge liberal-badge">
-          <div class="party-logo"><img src={Liberal} height="15px" /></div>
+        <div className="party-badge liberal-badge">
+          <div className="party-logo"><img src={Liberal} height="15px" /></div>
           <div>Liberal</div>
         </div>
       );
     case "NDP":
       return (
-        <div class="party-badge ndp-badge">
-          <div class="party-logo"><img src={NDP} width="25px" /></div>
+        <div className="party-badge ndp-badge">
+          <div className="party-logo"><img src={NDP} width="25px" /></div>
           <div>NDP</div>
         </div>
       );

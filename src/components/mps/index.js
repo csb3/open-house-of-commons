@@ -30,8 +30,8 @@ export default function Mps() {
         <Route path="/mps">
           <section className="mps-main">
             <header className="vote-list__header">
-              <h1 class="votes-header">Members of Parliament</h1>
-              <h2 class="votes-sub-header">43rd Parliament, Session 2</h2>
+              <h1 className="votes-header">Members of Parliament</h1>
+              <h2 className="votes-sub-header">43rd Parliament, Session 2</h2>
             </header>
 
             <div className="mps-main__header">

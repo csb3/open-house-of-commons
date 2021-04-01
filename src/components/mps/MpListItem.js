@@ -24,8 +24,8 @@ export default function MpListItem(props) {
         <aside className="mp-list-item__main-aside">
           <header className="mp-list-item__main-header">
             <h3>{props.first_name} {props.last_name}</h3>
-            <h4 class="list-party">{props.party_name}</h4>
-            <div class="mp-party">
+            <h4 className="list-party">{props.party_name}</h4>
+            <div className="mp-party">
               <PartyBadge party={props.party_name} />
             </div>
           </header>

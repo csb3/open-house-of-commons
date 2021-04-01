@@ -54,9 +54,9 @@ export default function UserVoteSummary(props) {
   });
 
   return (
-    <div class="user-vote-chart-container">
+    <div className="user-vote-chart-container">
       <canvas id="userSummaryChart" />
-      <div class="user-vote-disclaimer">* Based on {Number(userVotes.yesvotes) + Number(userVotes.novotes)} OHoC users' votes.</div> 
+      <div className="user-vote-disclaimer">* Based on {Number(userVotes.yesvotes) + Number(userVotes.novotes)} OHoC users' votes.</div> 
     </div>
   );
 }
