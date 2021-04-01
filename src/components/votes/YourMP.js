@@ -1,6 +1,6 @@
 import React from "react";
 import { useCookies } from 'react-cookie';
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 import ConstituencyBadge from "./badge/ConstituencyBadge";
 import FlagBadge from "./badge/FlagBadge";
@@ -14,11 +14,15 @@ import "../votes/YourMP.scss";
 import loading from "./../../images/loading.gif"
 
 export default function YourMP(props) {
-  const user = props.data.userInfo[0];
+  let user;
+  if (props.data && props.data.userInfo){
+    user = props.data.userInfo[0];
+    
+  }
   const votes = props.data.voteInfo;
   const [cookies] = useCookies(['Email']);
 
-  if (cookies.Email) {
+  if (cookies.Email && user) {
     let userConstId;
       if (cookies.Email === user.email) {
         userConstId = user.constituency_id;

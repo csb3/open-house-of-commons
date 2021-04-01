@@ -37,7 +37,7 @@ export default function Header(props) {
   } else {
     return (
       <div className="loading">
-        <img src={loading} width="20%" />
+        <img alt="loading" src={loading} width="20%" />
       </div>
     )
   }

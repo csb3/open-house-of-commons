@@ -2,8 +2,6 @@ import classnames from 'classnames';
 import { useHistory } from "react-router-dom";
 import './VoteListItem.scss';
 
-import ResultBadge from './../components/votes/badge/ResultBadge';
-
 export default function VoteListItem(props) {
   const history = useHistory();
   const result = props.result === 'Agreed To' ? '-agreedto' : '-negatived';

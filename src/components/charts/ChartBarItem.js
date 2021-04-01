@@ -1,5 +1,4 @@
 import classNames from "classnames";
-import { useState } from "react";
 
 export default function ChartBarItem(props) {
   const chartType = props.chartType;

@@ -1,5 +1,5 @@
 // This is the / (home) page.
-import {BrowserRouter as Router, Link, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 
 import Mps from "./mps/index";

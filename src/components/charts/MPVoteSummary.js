@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import Chart from "chart.js";
-import ChartDataLabels from 'chartjs-plugin-datalabels';
 
 export default function UserVoteSummary(props) {
   let mpYeaVotes = 0;

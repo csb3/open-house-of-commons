@@ -19,7 +19,7 @@ export default function MpVoteList(props) {
 
   return (
     <div>
-      <ul class="mp-votes-list">{show}</ul>
+      <ul className="mp-votes-list">{show}</ul>
     </div>
   );
 }

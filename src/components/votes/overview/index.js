@@ -24,7 +24,7 @@ export default function Overview(props) {
   } else {
     return (
       <div className="loading">
-        <img src={loading} width="20%" />
+        <img alt="loading" src={loading} width="20%" />
       </div>
     )
   }

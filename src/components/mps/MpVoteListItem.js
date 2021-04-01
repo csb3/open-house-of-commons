@@ -6,7 +6,6 @@ import {
   faEquals,
 } from '@fortawesome/free-solid-svg-icons';
 import "./Mp.scss";
-import classnames from "classnames";
 import Vote from '../Vote';
 
 import "./MpVoteListItem.scss"

@@ -1,7 +1,7 @@
 // This is the /vote/# page.
 
-import { useEffect, useRef, useState } from 'react';
-import { useParams, useHistory } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useParams} from "react-router-dom";
 import { useCookies } from 'react-cookie';
 import axios from "axios";
 
@@ -13,14 +13,12 @@ import Chart from "./../components/charts/Chart";
 import YourMP from "./votes/YourMP";
 import UserVote from "./UserVote";
 import './../components/Vote.scss';
-import MPVote from './MPVote';
 
 export default function Vote(props) {
   const {id} = useParams();
   const [vote, setVote] = useState({});
   const [cookies] = useCookies(['Id']);
   const userId = cookies.Id ? cookies.Id : null;
-  const history = useHistory();
   
   useEffect(() => {
     axios.get(`/api/votes/${id}`, {params: {userId: userId}})

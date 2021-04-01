@@ -1,9 +1,7 @@
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
-import classnames from "classnames";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faCheck,
-  faEquals,
   faTimes
 } from '@fortawesome/free-solid-svg-icons';
 import "./Mp.scss";

@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from 'react';
 import Chart from "./Chart";
 
 export default function ChartGrid(props) {

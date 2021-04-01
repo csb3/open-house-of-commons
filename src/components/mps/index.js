@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Link, Route, Switch, useHistory } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, useHistory } from 'react-router-dom';
 import useMpsData from '../../hooks/useMpsData';
 import filterMps from '../../helpers/filterMps';
 import MpList from './MpList';

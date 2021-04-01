@@ -6,7 +6,7 @@ import ConstituencyBadge from "../badge/ConstituencyBadge";
 import FlagBadge from "../badge/FlagBadge";
 import PartyBadge from "../badge/PartyBadge";
 import ResultBadge from "../badge/ResultBadge";
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt, faQuestionCircle, faUser, faClipboard } from '@fortawesome/free-regular-svg-icons';
