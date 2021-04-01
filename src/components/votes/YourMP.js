@@ -23,7 +23,6 @@ export default function YourMP(props) {
       if (cookies.Email === user.email) {
         userConstId = user.constituency_id;
       }
-    }
 
     let userMp;
     for (let mpVote in votes) {
