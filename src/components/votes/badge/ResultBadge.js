@@ -29,9 +29,15 @@ export default function ResultBadge(props) {
     );
   } else if (props.result === "Yea") {
     return (
+<<<<<<< HEAD
       <div className="agree-badge">
         <div className="agree-icon"><FontAwesomeIcon icon={faCheck} /></div>
         <div className="result-text">Yes</div>
+=======
+      <div class="agree-badge">
+        <div class="agree-icon"><FontAwesomeIcon icon={faCheck} /></div>
+        <div class="result-text">Yes</div>
+>>>>>>> main
       </div>
     );
   }

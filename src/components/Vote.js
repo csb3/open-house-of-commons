@@ -31,8 +31,17 @@ export default function Vote(props) {
       })
   }, []);
 
-  const setChartView = (view) => {setVote({...vote, chartView: view})};
-  const setDisplayView = (view) => {setVote({...vote, userView: view})};
+  const setChartView = (view) => {
+    setVote((vote) => {
+      return {...vote, chartView: view}
+    }
+  )};
+
+  const setDisplayView = (view) => {
+    setVote(() => {
+      return {...vote, userView: view}
+    }
+  )};
   const updateVote = (name) => {
 
     // if vote exists, delete it

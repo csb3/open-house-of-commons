@@ -13,6 +13,10 @@
      height: width;
      padding-top: 1rem;
      padding-bottom: 1rem;
+     &.display {
+       width: 30rem;
+       height: auto;
+     }
      &:hover {  
        border-color: #71F7B1;
      }

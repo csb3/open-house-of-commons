@@ -15,8 +15,8 @@ export default function SponListItem(props) {
           <div className="vote-list-header">
             <div className="vote-list-title">{`Vote No. ${props.vote_num}`}</div>
           
-            {props.result==="Negatived" && <div className="vote-disagree">Resulted in disagreed to <FontAwesomeIcon icon={faCheck} /></div>}
-            {props.result==="Agreed To" && <div className="vote-agree">Resulted in agreed to <FontAwesomeIcon icon={faTimes} /></div>}
+            {props.result==="Negatived" && <div className="vote-disagree">Result: Negatived <FontAwesomeIcon icon={faTimes} /></div>}
+            {props.result==="Agreed To" && <div className="vote-agree">Result: Agreed To <FontAwesomeIcon icon={faCheck} /></div>}
           </div>
         
           <div className="vote-list-summary">{props.summary}</div>
