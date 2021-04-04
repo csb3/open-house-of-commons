@@ -4,6 +4,11 @@ Our goal is to make Canadian politics more accessible and engaging to the genera
 
 To solve this issue, Open House of Commons (OHoC) displays key information directly to the user in a fast, intuitive, and visually appealing way, effectively removing the tedious process of having to search for information by themselves. 
 
+## Screenshots
+!["Screenshot of Home Page"](https://github.com/csb3/open-house-of-commons/blob/543ae6128638889587b7fca3c8ce877aaabfa6fa/docs/homepage.png?raw=true)
+!["Screenshot of Vote View"](https://github.com/csb3/open-house-of-commons/blob/543ae6128638889587b7fca3c8ce877aaabfa6fa/docs/vote-view.png?raw=true)
+!["Screenshot of Individual Chart View"](https://github.com/csb3/open-house-of-commons/blob/543ae6128638889587b7fca3c8ce877aaabfa6fa/docs/individual-chart.png?raw=true)
+
 ## API
 
 The Open House of Commons API is available in a separate repo: https://github.com/csb3/open-house-of-commons-api
